@@ -1,0 +1,344 @@
+{
+  "mushrooms": [
+    {
+      "id": "nameko",
+      "commonName": "Nameko",
+      "scientificName": "Pholiota nameko",
+      "imagePath": "images/nameko.jpg",
+      "etsyLink": "https://www.etsy.com/listings/nameko",
+      "alternateNames": ["Butterscotch Mushroom"],
+      "flavorProfile": {
+        "description": "Slightly nutty with a gelatinous texture when cooked",
+        "sources": []
+      },
+      "recipes": ["Miso Soup", "Nabemono Hot Pot"],
+      "healthBenefits": {
+        "description": "Rich in B-vitamins and dietary fiber",
+        "studies": [
+          {
+            "title": "Immunomodulatory Effects of Pholiota nameko",
+            "url": "#"
+          }
+        ]
+      },
+      "folkloreHistory": {
+        "description": "Traditionally used in Japanese cuisine since the Edo period",
+        "sources": []
+      },
+      "cultivationTips": "Grows well on hardwood sawdust substrates"
+    },
+    {
+      "id": "shiitake",
+      "commonName": "Shiitake",
+      "scientificName": "Lentinula edodes",
+      "imagePath": "images/shiitake.jpg",
+      "etsyLink": "https://www.etsy.com/listings/shiitake",
+      "alternateNames": ["Black Forest Mushroom", "Xiang Gu"],
+      "flavorProfile": {
+        "description": "Meaty texture with umami-rich, smoky notes",
+        "sources": []
+      },
+      "recipes": ["Stir-fries", "Dashi Broth"],
+      "healthBenefits": {
+        "description": "Contains lentinan, a compound studied for immune support",
+        "studies": [
+          {
+            "title": "Anticancer Properties of Lentinan",
+            "url": "#"
+          }
+        ]
+      },
+      "folkloreHistory": {
+        "description": "Cultivated in China for over 1,000 years",
+        "sources": []
+      },
+      "cultivationTips": "Best grown on oak logs"
+    },
+    {
+      "id": "maitake",
+      "commonName": "Maitake",
+      "scientificName": "Grifola frondosa",
+      "imagePath": "images/maitake.jpg",
+      "etsyLink": "https://www.etsy.com/listings/maitake",
+      "alternateNames": ["Hen of the Woods"],
+      "flavorProfile": {
+        "description": "Earthy, aromatic with a tender texture",
+        "sources": []
+      },
+      "recipes": ["Sautéed Maitake", "Maitake Tempura"],
+      "healthBenefits": {
+        "description": "Contains beta-glucans for immune support",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Called 'dancing mushroom' in Japan for the joy of finding it",
+        "sources": []
+      },
+      "cultivationTips": "Prefers oak stumps in cool climates"
+    },
+    {
+      "id": "lions-mane",
+      "commonName": "Lion's Mane",
+      "scientificName": "Hericium erinaceus",
+      "imagePath": "images/lions-mane.jpg",
+      "etsyLink": "https://www.etsy.com/listings/lionsmane",
+      "alternateNames": ["Bearded Tooth", "Hedgehog Mushroom"],
+      "flavorProfile": {
+        "description": "Delicate seafood-like flavor, similar to lobster",
+        "sources": []
+      },
+      "recipes": ["Lion's Mane 'Crab' Cakes", "Sautéed with Garlic"],
+      "healthBenefits": {
+        "description": "Studied for cognitive benefits and nerve regeneration",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Used in traditional Chinese medicine for centuries",
+        "sources": []
+      },
+      "cultivationTips": "Grows well on hardwood substrates"
+    },
+    {
+      "id": "enoki",
+      "commonName": "Enoki",
+      "scientificName": "Flammulina filiformis",
+      "imagePath": "images/enoki.jpg",
+      "etsyLink": "https://www.etsy.com/listings/enoki",
+      "alternateNames": ["Winter Mushroom"],
+      "flavorProfile": {
+        "description": "Crisp texture with mild fruity flavor",
+        "sources": []
+      },
+      "recipes": ["Hot Pot", "Stir-fries"],
+      "healthBenefits": {
+        "description": "Contains antioxidants and immune-boosting compounds",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Cultivated in Japan since 800 AD",
+        "sources": []
+      },
+      "cultivationTips": "Prefers cooler temperatures"
+    },
+    {
+      "id": "king-trumpet",
+      "commonName": "King Trumpet",
+      "scientificName": "Pleurotus eryngii",
+      "imagePath": "images/king-trumpet.jpg",
+      "etsyLink": "https://www.etsy.com/listings/kingtrumpet",
+      "alternateNames": ["King Oyster"],
+      "flavorProfile": {
+        "description": "Meaty texture with umami-rich flavor",
+        "sources": []
+      },
+      "recipes": ["Grilled King Trumpet", "Mushroom Steaks"],
+      "healthBenefits": {
+        "description": "Rich in protein and antioxidants",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Native to Mediterranean regions",
+        "sources": []
+      },
+      "cultivationTips": "Grows on straw-based substrates"
+    },
+    {
+      "id": "chestnut",
+      "commonName": "Chestnut Mushroom",
+      "scientificName": "Pholiota adiposa",
+      "imagePath": "images/chestnut.jpg",
+      "etsyLink": "https://www.etsy.com/listings/chestnutmushroom",
+      "alternateNames": ["Cinnamon Cap"],
+      "flavorProfile": {
+        "description": "Nutty and earthy with a crisp texture",
+        "sources": []
+      },
+      "recipes": ["Stir-fries", "Soups"],
+      "healthBenefits": {
+        "description": "High in antioxidants and dietary fiber",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Popular in Japanese and Korean cuisine",
+        "sources": []
+      },
+      "cultivationTips": "Prefers cooler temperatures and high humidity"
+    },
+    {
+      "id": "bears-head",
+      "commonName": "Bear's Head",
+      "scientificName": "Hericium americanum",
+      "imagePath": "images/bears-head.jpg",
+      "etsyLink": "https://www.etsy.com/listings/bearshead",
+      "alternateNames": ["Pom Pom Blanc"],
+      "flavorProfile": {
+        "description": "Mild, seafood-like flavor similar to crab",
+        "sources": []
+      },
+      "recipes": ["Bear's Head 'Scallops'", "Creamy Pasta"],
+      "healthBenefits": {
+        "description": "Supports nerve health and cognitive function",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Native to North American hardwood forests",
+        "sources": []
+      },
+      "cultivationTips": "Grows well on hardwood logs"
+    },
+    {
+      "id": "coral-tooth",
+      "commonName": "Coral Tooth",
+      "scientificName": "Hericium coralloides",
+      "imagePath": "images/coral-tooth.jpg",
+      "etsyLink": "https://www.etsy.com/listings/coraltooth",
+      "alternateNames": ["Coral Mushroom"],
+      "flavorProfile": {
+        "description": "Delicate flavor with tender texture",
+        "sources": []
+      },
+      "recipes": ["Tempura", "Seafood Substitute Dishes"],
+      "healthBenefits": {
+        "description": "Contains nerve growth factors",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Rare find in wild North American forests",
+        "sources": []
+      },
+      "cultivationTips": "Requires precise humidity control"
+    },
+    {
+      "id": "pioppino",
+      "commonName": "Pioppino",
+      "scientificName": "Agrocybe aegerita",
+      "imagePath": "images/pioppino.jpg",
+      "etsyLink": "https://www.etsy.com/listings/pioppino",
+      "alternateNames": ["Black Poplar Mushroom"],
+      "flavorProfile": {
+        "description": "Rich, nutty flavor with almond notes",
+        "sources": []
+      },
+      "recipes": ["Risotto", "Grilled Pioppino"],
+      "healthBenefits": {
+        "description": "High in essential amino acids",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Traditional Italian culinary mushroom",
+        "sources": []
+      },
+      "cultivationTips": "Grows well on straw-based substrates"
+    },
+    {
+      "id": "golden-oyster",
+      "commonName": "Golden Oyster",
+      "scientificName": "Pleurotus citrinopileatus",
+      "imagePath": "images/golden-oyster.jpg",
+      "etsyLink": "https://www.etsy.com/listings/goldenoyster",
+      "alternateNames": ["Yellow Oyster"],
+      "flavorProfile": {
+        "description": "Sweet, nutty flavor with velvety texture",
+        "sources": []
+      },
+      "recipes": ["Sautéed Oysters", "Mushroom Tacos"],
+      "healthBenefits": {
+        "description": "Rich in lovastatin and antioxidants",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Native to northern China and Japan",
+        "sources": []
+      },
+      "cultivationTips": "Fast-growing in warm temperatures"
+    },
+    {
+      "id": "pink-oyster",
+      "commonName": "Pink Oyster",
+      "scientificName": "Pleurotus djamor",
+      "imagePath": "images/pink-oyster.jpg",
+      "etsyLink": "https://www.etsy.com/listings/pinkoyster",
+      "alternateNames": ["Flaming Oyster"],
+      "flavorProfile": {
+        "description": "Bacon-like flavor when cooked",
+        "sources": []
+      },
+      "recipes": ["Vegan Bacon", "Stir-fries"],
+      "healthBenefits": {
+        "description": "High in protein and antioxidants",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Tropical mushroom popular in Southeast Asia",
+        "sources": []
+      },
+      "cultivationTips": "Requires high humidity and warmth"
+    },
+    {
+      "id": "blue-oyster",
+      "commonName": "Blue Oyster",
+      "scientificName": "Pleurotus columbinus",
+      "imagePath": "images/blue-oyster.jpg",
+      "etsyLink": "https://www.etsy.com/listings/blueoyster",
+      "alternateNames": [],
+      "flavorProfile": {
+        "description": "Mild flavor with velvety texture",
+        "sources": []
+      },
+      "recipes": ["Soups", "Pasta Dishes"],
+      "healthBenefits": {
+        "description": "Contains immune-boosting polysaccharides",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Cold-weather variant of oyster mushrooms",
+        "sources": []
+      },
+      "cultivationTips": "Prefers cooler growing conditions"
+    },
+    {
+      "id": "pearl-oyster",
+      "commonName": "Pearl Oyster",
+      "scientificName": "Pleurotus ostreatus",
+      "imagePath": "images/pearl-oyster.jpg",
+      "etsyLink": "https://www.etsy.com/listings/pearloyster",
+      "alternateNames": ["Common Oyster"],
+      "flavorProfile": {
+        "description": "Mild, seafood-like flavor",
+        "sources": []
+      },
+      "recipes": ["Oyster Mushroom Chowder", "Sautéed"],
+      "healthBenefits": {
+        "description": "Contains cholesterol-lowering compounds",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "One of the most widely cultivated mushrooms",
+        "sources": []
+      },
+      "cultivationTips": "Grows on various agricultural waste"
+    },
+    {
+      "id": "wood-ear",
+      "commonName": "Wood Ear",
+      "scientificName": "Auricularia auricula-judae",
+      "imagePath": "images/wood-ear.jpg",
+      "etsyLink": "https://www.etsy.com/listings/woodear",
+      "alternateNames": ["Jelly Ear", "Cloud Ear"],
+      "flavorProfile": {
+        "description": "Crunchy texture with mild flavor",
+        "sources": []
+      },
+      "recipes": ["Hot and Sour Soup", "Stir-fries"],
+      "healthBenefits": {
+        "description": "Rich in iron and vitamin B2",
+        "studies": []
+      },
+      "folkloreHistory": {
+        "description": "Used in Chinese medicine for centuries",
+        "sources": []
+      },
+      "cultivationTips": "Grows on elder wood and other hardwoods"
+    }
+  ]
+} 
