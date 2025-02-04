@@ -109,6 +109,7 @@
   width: 300px;
   height: 100%;
   padding: 2em;
+  background: #2196F3;
   transform: translateX(-300px);
   transition: transform 0.3s;
 }
@@ -164,4 +165,19 @@
   position: absolute;
   top: 1em;
   right: 1em;
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background: #efefef;
+}
+
+.card .card-content .card-title {
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.time-frame {
+  font-size: 0.9em;
+  color: #757575;
 } 

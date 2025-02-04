@@ -1,30 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushroom Encyclopedia</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <div class="container">
-  <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
-  <div id="theSidebar" class="sidebar white-text blue z-depth-2">
-    <button class="close-button fa fa-fw fa-close"></button>
-    <h1>Mushroom Varieties</h1>
-    <div class="related">
-      <h3>Filter</h3>
-      <a href="#!" class="filter" data-filter="all">All</a>
-      <a href="#!" class="filter" data-filter="culinary">Culinary</a>
-      <a href="#!" class="filter" data-filter="medicinal">Medicinal</a>
-    </div>
-  </div>
-  
-  <div id="theGrid" class="main">
-    <section class="grid">
-      <div class="container">
-        <div class="row" id="mushroom-grid">
-          <!-- Cards injected here -->
+    <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+    <div id="theSidebar" class="sidebar white-text blue z-depth-2">
+        <button class="close-button material-icons">close</button>
+        <h1>Mushroom Types</h1>
+        <div class="related">
+            <h3>Filter</h3>
+            <a href="#!">Culinary</a>
+            <a href="#!">Medicinal</a>
+            <a href="#!">Cultivation</a>
         </div>
-      </div>
-    </section>
+    </div>
     
-    <section class="content">
-      <div class="scroll-wrap" id="mushroom-content">
-        <!-- Content articles injected here -->
-      </div>
-      <button class="close-button"><i class="fa fa-close"></i><span>Close</span></button>
-    </section>
-  </div>
-</div> 
+    <div id="theGrid" class="main">
+        <section class="grid">
+            <div class="container">
+                <div class="row">
+                    <!-- Shiitake Card -->
+                    <div class="col l4">
+                        <a class="grid__item card medium hoverable" href="#shiitake">
+                            <div class="card-content">
+                                <span class="card-title">Shiitake</span>
+                                <p>Lentinula edodes</p>
+                            </div>
+                            <div class="card-action">
+                                <span class="time-frame">20 min read</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Lion's Mane Card -->
+                    <div class="col l4">
+                        <a class="grid__item card medium hoverable" href="#lionsmane">
+                            <div class="card-content">
+                                <span class="card-title">Lion's Mane</span>
+                                <p>Hericium erinaceus</p>
+                            </div>
+                            <div class="card-action">
+                                <span class="time-frame">25 min read</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- More mushroom cards here... -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="scroll-wrap">
+                <!-- Shiitake Content -->
+                <article class="content__item" id="shiitake">
+                    <span class="category category--full">Culinary Mushroom</span>
+                    <h2 class="title title--full">Shiitake</h2>
+                    <div class="meta meta--full">
+                        <img class="meta__avatar" src="images/shiitake.jpg" alt="Shiitake">
+                        <div class="mushroom-details">
+                            <h3>Flavor Profile</h3>
+                            <p>Meaty texture with umami-rich, smoky notes</p>
+                            <h3>Cultivation</h3>
+                            <p>Best grown on oak logs</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Lion's Mane Content -->
+                <article class="content__item" id="lionsmane">
+                    <span class="category category--full">Medicinal Mushroom</span>
+                    <h2 class="title title--full">Lion's Mane</h2>
+                    <div class="meta meta--full">
+                        <img class="meta__avatar" src="images/lionsmane.jpg" alt="Lion's Mane">
+                        <div class="mushroom-details">
+                            <h3>Health Benefits</h3>
+                            <p>Supports cognitive function and nerve health</p>
+                            <h3>Cultivation</h3>
+                            <p>Grows on hardwood substrates</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- More mushroom content articles... -->
+                
+            </div>
+            <button class="close-button"><i class="material-icons">close</i><span>Close</span></button>
+        </section>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html> 
