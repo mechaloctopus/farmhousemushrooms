@@ -42,13 +42,15 @@
             padding: 2rem;
             box-shadow: 0 8px 24px rgba(0,0,0,0.2);
             cursor: pointer;
-            transition: var(--transition);
+            transition: transform 0.2s, box-shadow 0.2s;
             overflow: hidden;
             position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.3);
         }
 
         .card-image {
@@ -109,6 +111,27 @@
             text-align: center;
             padding: 2rem;
             color: var(--text-secondary);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6 }
+            50% { opacity: 1 }
+            100% { opacity: 0.6 }
+        }
+
+        .detail-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+
+        .detail-section h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -122,64 +145,6 @@
         <div class="panel-content" id="panelContent"></div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('mushrooms.json')
-                .then(response => response.json())
-                .then(data => {
-                    const grid = document.getElementById('mushroomGrid');
-                    grid.innerHTML = '';
-                    
-                    data.mushrooms.forEach(mushroom => {
-                        const card = document.createElement('div');
-                        card.className = 'card';
-                        card.innerHTML = `
-                            ${mushroom.imagePath ? `
-                            <img src="${mushroom.imagePath}" 
-                                 alt="${mushroom.commonName}" 
-                                 class="card-image">` : ''}
-                            <h2>${mushroom.commonName}</h2>
-                            <p class="scientific-name">${mushroom.scientificName}</p>
-                        `;
-                        
-                        card.addEventListener('click', () => showPanel(mushroom));
-                        grid.appendChild(card);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    document.getElementById('mushroomGrid').innerHTML = 
-                        '<div class="error">Failed to load data</div>';
-                });
-        });
-
-        function showPanel(mushroom) {
-            const panel = document.getElementById('contentPanel');
-            const content = document.getElementById('panelContent');
-            
-            content.innerHTML = `
-                <h2>${mushroom.commonName}</h2>
-                <p class="scientific-name">${mushroom.scientificName}</p>
-                ${mushroom.imagePath ? `
-                <img src="${mushroom.imagePath}" 
-                     alt="${mushroom.commonName}" 
-                     class="card-image">` : ''}
-                <div class="detail-section">
-                    <h3>Flavor Profile</h3>
-                    <p>${mushroom.flavorProfile.description}</p>
-                </div>
-                <div class="detail-section">
-                    <h3>Cultivation Tips</h3>
-                    <p>${mushroom.cultivationTips}</p>
-                </div>
-            `;
-            
-            panel.classList.add('active');
-        }
-
-        function closePanel() {
-            document.getElementById('contentPanel').classList.remove('active');
-        }
-    </script>
+    <script src="script.js" type="module"></script>
 </body>
 </html> 
