@@ -12,6 +12,9 @@
             --text-primary: #ffffff;
             --text-secondary: #b3b3b3;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --accent-light: #66BB6A;
+            --overlay: rgba(0,0,0,0.5);
+            --card-gradient: linear-gradient(45deg, var(--accent) 0%, transparent 120%);
         }
 
         * {
@@ -42,17 +45,17 @@
             padding: 2rem;
             box-shadow: 0 8px 24px rgba(0,0,0,0.2);
             cursor: pointer;
-            transition: var(--transition);
+            transition: var(--transition), box-shadow 0.3s ease;
             transform-style: preserve-3d;
             overflow: hidden;
             position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .card::before {
-            content: '';
+            content: var(--card-gradient);
             position: absolute;
             inset: 0;
-            background: linear-gradient(45deg, var(--accent) 0%, transparent 100%);
             opacity: 0;
             transition: var(--transition);
             z-index: 0;
@@ -60,6 +63,8 @@
 
         .card:hover {
             transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+            z-index: 10;
         }
 
         .card:hover::before {
@@ -116,6 +121,24 @@
             right: 0;
         }
 
+        .content-panel::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 600px;
+            bottom: 0;
+            background: var(--overlay);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .content-panel.active::before {
+            opacity: 1;
+            right: 0;
+        }
+
         .close-btn {
             position: absolute;
             top: 1.5rem;
@@ -150,6 +173,12 @@
             border-radius: 12px;
             margin: 2rem 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+
+        .mushroom-image:hover {
+            transform: scale(1.03);
         }
 
         .detail-section {
@@ -157,6 +186,14 @@
             padding: 1.5rem;
             background: var(--primary);
             border-radius: 12px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateX(20px);
+            opacity: 0;
+        }
+
+        .detail-section.visible {
+            transform: translateX(0);
+            opacity: 1;
         }
 
         .detail-section h3 {
@@ -175,6 +212,40 @@
             color: #ef5350;
             text-align: center;
             padding: 2rem;
+        }
+
+        .etsy-link {
+            color: var(--accent-light);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .etsy-link:hover {
+            color: var(--text-primary);
+        }
+
+        .etsy-link::after {
+            content: '↗';
+            font-size: 0.8em;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .loading::after {
+            content: '🍄';
+            display: block;
+            font-size: 2rem;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         @media (max-width: 768px) {
@@ -253,43 +324,94 @@
                 const panel = document.getElementById('contentPanel');
                 const content = document.getElementById('panelContent');
                 
-                content.innerHTML = `
-                    <h2>${mushroom.commonName}</h2>
-                    <p class="scientific-name">${mushroom.scientificName}</p>
-                    ${mushroom.imagePath ? `
-                    <img src="${mushroom.imagePath}" 
-                         alt="${mushroom.commonName} mushroom" 
-                         class="mushroom-image">` : ''}
-                    
-                    <div class="detail-section">
-                        <h3>Flavor Profile</h3>
-                        <p>${mushroom.flavorProfile.description}</p>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <h3>Cultivation Guide</h3>
-                        <p>${mushroom.cultivationTips}</p>
-                    </div>
-                    
-                    ${mushroom.etsyLink ? `
-                    <div class="detail-section">
-                        <h3>Purchase</h3>
-                        <a href="${mushroom.etsyLink}" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="etsy-link">
-                            Available on Etsy &rarr;
-                        </a>
-                    </div>` : ''}
-                `;
+                // Clear previous content
+                content.innerHTML = '';
+                
+                // Create elements with transitions
+                const elements = [
+                    createPanelElement('h2', mushroom.commonName),
+                    createPanelElement('p', mushroom.scientificName, 'scientific-name'),
+                    mushroom.imagePath && createImageElement(mushroom),
+                    createDetailSection('Flavor Profile', mushroom.flavorProfile.description),
+                    createDetailSection('Cultivation Guide', mushroom.cultivationTips),
+                    mushroom.etsyLink && createPurchaseSection(mushroom)
+                ].filter(Boolean);
+
+                elements.forEach(el => content.appendChild(el));
                 
                 panel.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                document.body.style.overflow = 'hidden';
+                
+                // Add keyboard close
+                document.addEventListener('keydown', handleEscapeKey);
+                
+                // Animate sections sequentially
+                animateSections();
+            }
+
+            function createPanelElement(tag, text, className) {
+                const el = document.createElement(tag);
+                el.textContent = text;
+                if (className) el.className = className;
+                return el;
+            }
+
+            function createImageElement(mushroom) {
+                const img = document.createElement('img');
+                img.src = mushroom.imagePath;
+                img.alt = `${mushroom.commonName} mushroom`;
+                img.className = 'mushroom-image';
+                img.loading = 'lazy';
+                return img;
+            }
+
+            function createDetailSection(title, content) {
+                const section = document.createElement('div');
+                section.className = 'detail-section';
+                section.innerHTML = `
+                    <h3>${title}</h3>
+                    <p>${content}</p>
+                `;
+                return section;
+            }
+
+            function createPurchaseSection(mushroom) {
+                const section = document.createElement('div');
+                section.className = 'detail-section';
+                section.innerHTML = `
+                    <h3>Purchase</h3>
+                    <a href="${mushroom.etsyLink}" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="etsy-link">
+                        Available on Etsy
+                    </a>
+                `;
+                return section;
+            }
+
+            function animateSections() {
+                document.querySelectorAll('.detail-section').forEach((section, index) => {
+                    setTimeout(() => {
+                        section.classList.add('visible');
+                    }, index * 100);
+                });
+            }
+
+            function handleEscapeKey(event) {
+                if (event.key === 'Escape') closePanel();
             }
 
             function closePanel() {
-                document.getElementById('contentPanel').classList.remove('active');
-                state.currentMushroom = null;
+                const panel = document.getElementById('contentPanel');
+                panel.classList.remove('active');
+                document.body.style.overflow = '';
+                document.removeEventListener('keydown', handleEscapeKey);
+                
+                // Reset animations
+                document.querySelectorAll('.detail-section').forEach(section => {
+                    section.classList.remove('visible');
+                });
             }
 
             function handleError(error) {
