@@ -2,12 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize Materialize components
   M.AutoInit();
   
-  // Load mushroom data
-  fetch('mushrooms.json')
-    .then(response => response.json())
-    .then(data => initializeMushrooms(data.mushrooms))
-    .catch(error => console.error('Error:', error));
-
   // Menu toggle
   const menuToggle = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('theSidebar');
@@ -21,19 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
-      const content = document.querySelector('.content');
-      
-      // Hide all content items
-      document.querySelectorAll('.content__item').forEach(article => {
-        article.classList.remove('active');
-      });
-      
-      // Show target content
-      const targetArticle = document.querySelector(targetId);
-      if (targetArticle) {
-        targetArticle.classList.add('active');
-        content.classList.add('active');
-      }
+      document.querySelector('.content').classList.add('active');
+      document.querySelector(targetId).classList.add('active');
     });
   });
 

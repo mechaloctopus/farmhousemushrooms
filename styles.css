@@ -99,7 +99,6 @@
 /* Original Layout Styles */
 .container {
   position: relative;
-  width: 100%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -108,26 +107,23 @@
   position: fixed;
   width: 300px;
   height: 100%;
-  padding: 2em;
   background: #2196F3;
+  color: white;
   transform: translateX(-300px);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2em;
 }
 
 .sidebar.active {
   transform: translateX(0);
 }
 
-.grid {
-  padding: 2em;
-}
-
 .grid__item {
-  display: block;
-  position: relative;
-  margin: 1em;
   background: white;
+  padding: 2em;
+  margin: 1em;
   border-radius: 4px;
+  cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -150,21 +146,21 @@
   right: 0;
 }
 
-.meta__avatar {
-  float: left;
-  margin: 0 2em 1em 0;
-  max-width: 200px;
+.content__item {
+  display: none;
+  padding: 4em;
 }
 
-.detail-section {
-  clear: both;
-  margin: 2em 0;
+.content__item.active {
+  display: block;
 }
 
 .close-button {
   position: absolute;
   top: 1em;
   right: 1em;
+  padding: 1em;
+  cursor: pointer;
 }
 
 body, html {
