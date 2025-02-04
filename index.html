@@ -91,10 +91,18 @@
             right: 0;
         }
 
+        .panel-header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: var(--secondary);
+            z-index: 1001;
+            padding: 1rem;
+        }
+
         .close-btn {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
             cursor: pointer;
             background: none;
             border: none;
@@ -141,7 +149,9 @@
     </div>
 
     <div class="content-panel" id="contentPanel">
-        <button class="close-btn" onclick="closePanel()">&times;</button>
+        <div class="panel-header">
+            <button class="close-btn" onclick="closePanel()">&times;</button>
+        </div>
         <div class="panel-content" id="panelContent"></div>
     </div>
 
