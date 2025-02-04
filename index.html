@@ -18,6 +18,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -29,9 +30,6 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             cursor: pointer;
             aspect-ratio: 1/1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .card h2 {
@@ -80,25 +78,27 @@
     </div>
 
     <script>
-        // Load mushroom data
-        fetch('mushrooms.json')
-            .then(response => response.json())
-            .then(data => {
-                const grid = document.getElementById('mushroomGrid');
-                
-                data.mushrooms.forEach(mushroom => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <h2>${mushroom.commonName}</h2>
-                        <p class="scientific-name">${mushroom.scientificName}</p>
-                        <p>${mushroom.cultivationTips.substring(0, 100)}...</p>
-                    `;
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('mushrooms.json')
+                .then(response => response.json())
+                .then(data => {
+                    const grid = document.getElementById('mushroomGrid');
                     
-                    card.addEventListener('click', () => showPanel(mushroom));
-                    grid.appendChild(card);
-                });
-            });
+                    data.mushrooms.forEach(mushroom => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        card.innerHTML = `
+                            <h2>${mushroom.commonName}</h2>
+                            <p class="scientific">${mushroom.scientificName}</p>
+                            <p class="tips">${mushroom.cultivationTips}</p>
+                        `;
+                        
+                        card.addEventListener('click', () => showPanel(mushroom));
+                        grid.appendChild(card);
+                    });
+                })
+                .catch(error => console.error('Error loading mushrooms:', error));
+        });
 
         function showPanel(mushroom) {
             const panel = document.getElementById('contentPanel');
@@ -106,13 +106,12 @@
             
             content.innerHTML = `
                 <h2>${mushroom.commonName}</h2>
-                <p class="scientific-name">${mushroom.scientificName}</p>
-                <img src="${mushroom.imagePath}" alt="${mushroom.commonName}" style="max-width: 100%; margin: 20px 0;">
+                <p class="scientific">${mushroom.scientificName}</p>
+                <img src="${mushroom.imagePath}" alt="${mushroom.commonName}" style="max-width: 200px;">
                 <h3>Flavor Profile</h3>
                 <p>${mushroom.flavorProfile.description}</p>
                 <h3>Cultivation Tips</h3>
                 <p>${mushroom.cultivationTips}</p>
-                ${mushroom.etsyLink ? `<a href="${mushroom.etsyLink}" target="_blank">Purchase on Etsy</a>` : ''}
             `;
             
             panel.classList.add('active');
