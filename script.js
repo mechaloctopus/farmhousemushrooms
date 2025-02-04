@@ -82,7 +82,7 @@ const MushroomUI = (() => {
   function handleCardClick(e) {
     const card = e.target.closest('.card');
     if (card) {
-      const mushroom = JSON.parse(card.dataset.mushroom);
+      const mushroom = JSON.parse(decodeURIComponent(card.dataset.mushroom));
       showPanel(mushroom);
     }
   }
@@ -106,7 +106,7 @@ const MushroomUI = (() => {
         DOM.grid.innerHTML = data.mushrooms.map(mushroom => {
           const card = cardTemplate(mushroom);
           return card.replace('<div class="card">', 
-            `<div class="card" data-mushroom='${JSON.stringify(mushroom)}'>`);
+            `<div class="card" data-mushroom="${encodeURIComponent(JSON.stringify(mushroom))}">`);
         }).join('');
         
         DOM.grid.addEventListener('click', handleCardClick);
@@ -119,4 +119,7 @@ const MushroomUI = (() => {
   };
 })();
 
-document.addEventListener('DOMContentLoaded', MushroomUI.init); 
+document.addEventListener('DOMContentLoaded', MushroomUI.init);
+
+// Expose closePanel to global scope so inline onclick works
+window.closePanel = MushroomUI.closePanel; 
