@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mushroom Encyclopedia</title>
     <style>
+        :root {
+            --primary: #2a2a2a;
+            --secondary: #3d3d3d;
+            --accent: #4CAF50;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -10,37 +21,80 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--primary);
+            color: var(--text-primary);
+            line-height: 1.6;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1440px;
             margin: 0 auto;
         }
 
         .card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: var(--secondary);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
             cursor: pointer;
-            aspect-ratio: 1/1;
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, var(--accent) 0%, transparent 100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        .card:hover::before {
+            opacity: 0.1;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card h2 {
-            color: #2c3e50;
-            margin-bottom: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
         }
 
         .scientific-name {
-            color: #7f8c8d;
             font-style: italic;
-            font-size: 0.9em;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .cultivation-tips {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .content-panel {
@@ -50,11 +104,12 @@
             width: 100%;
             max-width: 600px;
             height: 100vh;
-            background: white;
-            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-            padding: 30px;
+            background: var(--secondary);
+            box-shadow: -4px 0 24px rgba(0,0,0,0.3);
+            padding: 2rem;
             overflow-y: auto;
-            transition: right 0.3s ease;
+            transition: var(--transition);
+            z-index: 1000;
         }
 
         .content-panel.active {
@@ -63,63 +118,189 @@
 
         .close-btn {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            color: var(--text-primary);
+        }
+
+        .close-btn:hover {
+            background: var(--accent);
+            transform: rotate(90deg);
+        }
+
+        .panel-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mushroom-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .detail-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--primary);
+            border-radius: 12px;
+        }
+
+        .detail-section h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .error {
+            color: #ef5350;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .content-panel {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="grid" id="mushroomGrid"></div>
+    <div class="grid" id="mushroomGrid">
+        <div class="loading">Loading mushroom data...</div>
+    </div>
+
     <div class="content-panel" id="contentPanel">
-        <div class="close-btn" onclick="closePanel()">×</div>
-        <div id="panelContent"></div>
+        <button class="close-btn" onclick="closePanel()">&times;</button>
+        <div class="panel-content" id="panelContent"></div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('mushrooms.json')
-                .then(response => response.json())
-                .then(data => {
-                    const grid = document.getElementById('mushroomGrid');
-                    
-                    data.mushrooms.forEach(mushroom => {
-                        const card = document.createElement('div');
-                        card.className = 'card';
-                        card.innerHTML = `
-                            <h2>${mushroom.commonName}</h2>
-                            <p class="scientific">${mushroom.scientificName}</p>
-                            <p class="tips">${mushroom.cultivationTips}</p>
-                        `;
-                        
-                        card.addEventListener('click', () => showPanel(mushroom));
-                        grid.appendChild(card);
+        (function() {
+            'use strict';
+            
+            const state = {
+                currentMushroom: null,
+                isLoading: true
+            };
+
+            function init() {
+                fetchMushrooms()
+                    .then(renderGrid)
+                    .catch(handleError)
+                    .finally(() => {
+                        state.isLoading = false;
                     });
-                })
-                .catch(error => console.error('Error loading mushrooms:', error));
-        });
+            }
 
-        function showPanel(mushroom) {
-            const panel = document.getElementById('contentPanel');
-            const content = document.getElementById('panelContent');
-            
-            content.innerHTML = `
-                <h2>${mushroom.commonName}</h2>
-                <p class="scientific">${mushroom.scientificName}</p>
-                <img src="${mushroom.imagePath}" alt="${mushroom.commonName}" style="max-width: 200px;">
-                <h3>Flavor Profile</h3>
-                <p>${mushroom.flavorProfile.description}</p>
-                <h3>Cultivation Tips</h3>
-                <p>${mushroom.cultivationTips}</p>
-            `;
-            
-            panel.classList.add('active');
-        }
+            async function fetchMushrooms() {
+                const response = await fetch('mushrooms.json');
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            }
 
-        function closePanel() {
-            document.getElementById('contentPanel').classList.remove('active');
-        }
+            function renderGrid(data) {
+                const grid = document.getElementById('mushroomGrid');
+                grid.innerHTML = '';
+                
+                data.mushrooms.forEach(mushroom => {
+                    const card = createCardElement(mushroom);
+                    grid.appendChild(card);
+                });
+            }
+
+            function createCardElement(mushroom) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-content">
+                        <h2>${mushroom.commonName}</h2>
+                        <p class="scientific-name">${mushroom.scientificName}</p>
+                        <p class="cultivation-tips">${mushroom.cultivationTips}</p>
+                    </div>
+                `;
+                card.addEventListener('click', () => showDetailPanel(mushroom));
+                return card;
+            }
+
+            function showDetailPanel(mushroom) {
+                state.currentMushroom = mushroom;
+                const panel = document.getElementById('contentPanel');
+                const content = document.getElementById('panelContent');
+                
+                content.innerHTML = `
+                    <h2>${mushroom.commonName}</h2>
+                    <p class="scientific-name">${mushroom.scientificName}</p>
+                    ${mushroom.imagePath ? `
+                    <img src="${mushroom.imagePath}" 
+                         alt="${mushroom.commonName} mushroom" 
+                         class="mushroom-image">` : ''}
+                    
+                    <div class="detail-section">
+                        <h3>Flavor Profile</h3>
+                        <p>${mushroom.flavorProfile.description}</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Cultivation Guide</h3>
+                        <p>${mushroom.cultivationTips}</p>
+                    </div>
+                    
+                    ${mushroom.etsyLink ? `
+                    <div class="detail-section">
+                        <h3>Purchase</h3>
+                        <a href="${mushroom.etsyLink}" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="etsy-link">
+                            Available on Etsy &rarr;
+                        </a>
+                    </div>` : ''}
+                `;
+                
+                panel.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function closePanel() {
+                document.getElementById('contentPanel').classList.remove('active');
+                state.currentMushroom = null;
+            }
+
+            function handleError(error) {
+                console.error('Error:', error);
+                const grid = document.getElementById('mushroomGrid');
+                grid.innerHTML = `<div class="error">Failed to load mushroom data. Please try again later.</div>`;
+            }
+
+            // Initialize app
+            document.addEventListener('DOMContentLoaded', init);
+        })();
     </script>
 </body>
 </html> 
