@@ -1,21 +1,28 @@
 <div class="container">
   <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
   <div id="theSidebar" class="sidebar white-text blue z-depth-2">
-    <!-- Filter sidebar content -->
+    <button class="close-button fa fa-fw fa-close"></button>
+    <h1>Mushroom Varieties</h1>
+    <div class="related">
+      <h3>Filter</h3>
+      <a href="#!" class="filter" data-filter="all">All</a>
+      <a href="#!" class="filter" data-filter="culinary">Culinary</a>
+      <a href="#!" class="filter" data-filter="medicinal">Medicinal</a>
+    </div>
   </div>
   
   <div id="theGrid" class="main">
     <section class="grid">
       <div class="container">
         <div class="row" id="mushroom-grid">
-          <!-- Dynamic cards will be inserted here by JavaScript -->
+          <!-- Cards injected here -->
         </div>
       </div>
     </section>
     
     <section class="content">
       <div class="scroll-wrap" id="mushroom-content">
-        <!-- Dynamic content items will be inserted here by JavaScript -->
+        <!-- Content articles injected here -->
       </div>
       <button class="close-button"><i class="fa fa-close"></i><span>Close</span></button>
     </section>
