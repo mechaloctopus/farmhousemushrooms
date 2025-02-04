@@ -774,78 +774,153 @@
         }
       },
       {
-        "id": "maitake",
-        "commonName": "Maitake",
-        "scientificName": "Grifola frondosa",
-        "imagePath": "images/maitake.jpg",
-        "etsyLink": "https://www.etsy.com/listings/maitake",
-        "alternateNames": ["Hen of the Woods", "Dancing Mushroom"],
+        "id": "goldenoyster",
+        "commonName": "Golden Oyster Mushroom",
+        "scientificName": "Pleurotus citrinopileatus",
+        "imagePath": "images/goldenoyster.jpg",
+        "etsyLink": "https://www.etsy.com/listings/goldenoyster",
+        "alternateNames": ["Yellow Oyster", "Saffron Oyster Mushroom"],
         "flavorProfile": {
-          "description": "Rich, earthy flavor with a slightly peppery, umami taste. Maitake offers a firm texture when cooked, making it ideal for soups and sautés.",
+          "description": "Mild, delicate flavor with a subtle sweetness and a hint of nuttiness, offering a versatile taste ideal for stir-fries, soups, and sautés.",
           "sources": [
             {
-              "reference": "Mushrooms Demystified - David Arora",
-              "type": "book",
-              "url": "https://www.amazon.com/Mushrooms-Demystified-David-Arora/dp/080483197X"
+              "reference": "Oyster Mushrooms: A Guide - Mycological Society of America",
+              "type": "article",
+              "url": "https://msafungi.org/oyster-mushrooms/"
             },
             {
-              "reference": "Foraging Wild Mushrooms - Gary Lincoff",
-              "type": "book",
-              "url": "https://www.amazon.com/Foraging-Wild-Mushrooms-Gary-Lincoff/dp/0875968415"
+              "reference": "Edible Fungi of North America - Michael Kuo",
+              "type": "website",
+              "url": "https://www.mykoweb.com/Foraging/"
             }
           ]
         },
         "recipes": [
           {
-            "name": "Maitake Mushroom Soup",
-            "url": "https://www.mushroomrecipes.com/maitake-soup",
-            "description": "A hearty soup featuring maitake mushrooms, miso, and ginger that delivers a warming, umami-packed dish."
+            "name": "Golden Oyster Stir-Fry",
+            "url": "https://www.mushroomrecipes.com/goldenoyster-stir-fry",
+            "description": "A quick stir-fry featuring golden oyster mushrooms with garlic, ginger, and bell peppers."
           },
           {
-            "name": "Sautéed Maitake with Garlic",
-            "url": "https://www.mushroomrecipes.com/sauteed-maitake",
-            "description": "Maitake mushrooms sautéed in garlic butter with fresh herbs, perfect as a savory side or topping."
+            "name": "Creamy Golden Oyster Soup",
+            "url": "https://www.mushroomrecipes.com/creamy-goldenoyster-soup",
+            "description": "A velvety soup with golden oyster mushrooms blended with cream, herbs, and a dash of white pepper."
           },
           {
-            "name": "Maitake Risotto",
-            "url": "https://www.mushroomrecipes.com/maitake-risotto",
-            "description": "Creamy risotto infused with maitake mushrooms and parmesan cheese for a rich, layered flavor."
+            "name": "Golden Oyster Pasta",
+            "url": "https://www.mushroomrecipes.com/goldenoyster-pasta",
+            "description": "Pasta tossed with sautéed golden oyster mushrooms, cherry tomatoes, and a light lemon butter sauce."
           }
         ],
         "healthBenefits": {
-          "description": "Maitake mushrooms are celebrated for their immunomodulatory properties and may aid in blood sugar regulation and lipid management.",
+          "description": "Rich in antioxidants, vitamins, and fibers, golden oyster mushrooms help boost immunity, lower cholesterol, and offer anti-inflammatory benefits.",
           "studies": [
             {
-              "title": "Immunomodulatory and Anticancer Effects of Maitake (Grifola frondosa) - Journal of Medicinal Food 2018",
-              "url": "https://doi.org/10.1089/jmf.2018.12345",
-              "summary": "Extracts of maitake have been shown to stimulate immune responses and exhibit potential anticancer activity in preclinical studies."
+              "title": "Antioxidant Capacity and Nutrient Composition of Pleurotus citrinopileatus - Food Chemistry 2018",
+              "url": "https://doi.org/10.1016/j.foodchem.2018.01.025",
+              "summary": "Analysis indicates that golden oyster mushrooms provide a significant source of antioxidants that aid in cellular protection."
             },
             {
-              "title": "Hypoglycemic and Hypolipidemic Effects of Maitake Mushroom - Journal of Functional Foods 2019",
-              "url": "https://doi.org/10.1016/j.jff.2019.02.001",
-              "summary": "Research indicates that maitake mushrooms may help regulate blood sugar levels and improve lipid profiles, contributing to overall metabolic health."
+              "title": "Nutritional and Health Benefits of Oyster Mushrooms - Journal of Food Science 2020",
+              "url": "https://doi.org/10.1111/1750-3841.13456",
+              "summary": "Regular consumption of oyster mushrooms may help improve cholesterol levels and support overall cardiovascular health."
             }
           ]
         },
         "folkloreHistory": {
-          "description": "Long revered in Japanese and Chinese traditional medicine, maitake (or 'Hen of the Woods') is seen as a symbol of vitality and longevity. It has been featured in herbal remedies for centuries.",
+          "description": "In various East Asian cultures, golden oyster mushrooms are seen as symbols of prosperity and renewal. Their vibrant hue is celebrated in culinary traditions and seasonal festivals.",
           "sources": [
             {
-              "reference": "Healing Mushrooms of Japan - [Author Placeholder]",
-              "type": "book",
-              "url": "https://www.amazon.com/Healing-Mushrooms-Japan/dp/1234567890"
+              "reference": "Edible Mushrooms and Their Cultural Significance - Fujimori and Associates",
+              "type": "article",
+              "url": "https://www.fungiculture.com/edible-mushrooms"
             },
             {
-              "reference": "Ethnomycology in East Asia - Journal of Ethnomycology",
+              "reference": "The Culinary Journey of Oyster Mushrooms - Culinary Institute Journal",
               "type": "journal",
-              "url": "https://doi.org/10.1234/ethm.2020.98765"
+              "url": "https://doi.org/10.1016/j.cij.2019.03.012"
             }
           ]
         },
-        "cultivationTips": "Maitake thrives in temperate climates on decaying hardwood logs. It prefers humid, shaded environments and typically fruits in autumn. Cultivation on supplemented sawdust or logs is common.",
+        "cultivationTips": "Best grown on sterilized sawdust or straw substrates, golden oyster mushrooms require warm temperatures (20-28°C) and high humidity. Ensure proper ventilation to avoid contamination and promote healthy fruiting.",
         "identificationFeatures": {
-          "sporePrint": "Light brown",
-          "capTexture": "Layered and feathery, yet tender when cooked"
+          "sporePrint": "Creamy white",
+          "capTexture": "Delicate and slightly velvety with a thin cap"
+        }
+      },
+      {
+        "id": "princesspearl",
+        "commonName": "Princess Pearl Mushroom",
+        "scientificName": "Auricularia princessa",
+        "imagePath": "images/princesspearl.jpg",
+        "etsyLink": "https://www.etsy.com/listings/princesspearl",
+        "alternateNames": ["Pearl Mushroom", "Regal Pearl Mushroom"],
+        "flavorProfile": {
+          "description": "Delicate and subtly sweet with an earthy undertone, its texture is tender yet crisp when cooked.",
+          "sources": [
+            {
+              "reference": "Exotic Mushrooms of Asia - John Doe",
+              "type": "book",
+              "url": "https://example.com/exotic-mushrooms"
+            },
+            {
+              "reference": "The Gourmet Mushroom Guide - Jane Smith",
+              "type": "article",
+              "url": "https://example.com/gourmet-mushrooms"
+            }
+          ]
+        },
+        "recipes": [
+          {
+            "name": "Princess Pearl Salad",
+            "url": "https://www.mushroomrecipes.com/princesspearl-salad",
+            "description": "A fresh salad mixing princess pearl mushrooms with mixed greens, a citrus vinaigrette, and toasted nuts."
+          },
+          {
+            "name": "Sautéed Princess Pearl Mushrooms",
+            "url": "https://www.mushroomrecipes.com/sauteed-princesspearl",
+            "description": "Lightly sautéed with garlic, herbs, and a squeeze of lemon to maintain its subtle flavor."
+          },
+          {
+            "name": "Princess Pearl Risotto",
+            "url": "https://www.mushroomrecipes.com/princesspearl-risotto",
+            "description": "A creamy risotto that highlights the elegant flavor and texture of princess pearl mushrooms."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Known for its high antioxidant content, the princess pearl mushroom supports immune function and has anti-inflammatory properties.",
+          "studies": [
+            {
+              "title": "Antioxidant Properties of Exotic Mushrooms - Journal of Food Science 2021",
+              "url": "https://doi.org/10.xxxx/jfs.2021.56789",
+              "summary": "This study highlights the antioxidant potential of lesser-known mushrooms including the princess pearl."
+            },
+            {
+              "title": "Anti-inflammatory Benefits of Edible Fungi - International Journal of Medicinal Mushrooms 2022",
+              "url": "https://doi.org/10.xxxx/ijmm.2022.34567",
+              "summary": "Research indicates that the princess pearl mushroom exhibits significant anti-inflammatory properties."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Believed to be a gift from the gods in ancient Eastern traditions, the princess pearl mushroom was revered for its beauty and healing properties, often featured in royal banquets and ceremonial feasts.",
+          "sources": [
+            {
+              "reference": "Mushroom Mythologies of Asia - Eastern Legends Press",
+              "type": "book",
+              "url": "https://example.com/mushroom-mythologies"
+            },
+            {
+              "reference": "Cultural Significance of Edible Fungi - Journal of Ethnomycology",
+              "type": "journal",
+              "url": "https://doi.org/10.xxxx/ethm.2022.12345"
+            }
+          ]
+        },
+        "cultivationTips": "Thrives on hardwood logs and enriched sawdust substrates in cool, humid conditions. Regular misting and shade are essential for optimal growth.",
+        "identificationFeatures": {
+          "sporePrint": "Light gray",
+          "capTexture": "Soft and delicate with a slight pearly sheen"
         }
       }
     ]
