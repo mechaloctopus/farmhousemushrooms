@@ -3,59 +3,63 @@
 <head>
     <title>Mushroom Encyclopedia</title>
     <style>
-        /* Basic Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        /* Layout */
-        .container {
-            display: flex;
-            min-height: 100vh;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background: #f0f0f0;
+        body {
+            font-family: Arial, sans-serif;
             padding: 20px;
-            border-right: 1px solid #ddd;
         }
 
-        /* Grid */
         .grid {
-            flex: 1;
-            padding: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .card {
             background: white;
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             cursor: pointer;
-            transition: transform 0.2s;
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 8px;
         }
 
-        /* Content Window */
-        .content {
+        .scientific-name {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .content-panel {
             position: fixed;
             top: 0;
             right: -100%;
             width: 100%;
-            height: 100%;
+            max-width: 600px;
+            height: 100vh;
             background: white;
-            padding: 40px;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
             overflow-y: auto;
             transition: right 0.3s ease;
         }
 
-        .content:target {
+        .content-panel.active {
             right: 0;
         }
 
@@ -64,35 +68,59 @@
             top: 20px;
             right: 20px;
             font-size: 24px;
-            text-decoration: none;
-            color: #333;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="sidebar">
-        <h2>Mushroom Types</h2>
-        <nav>
-            <a href="#shiitake">Shiitake</a>
-            <!-- Add more mushrooms -->
-        </nav>
+    <div class="grid" id="mushroomGrid"></div>
+    <div class="content-panel" id="contentPanel">
+        <div class="close-btn" onclick="closePanel()">×</div>
+        <div id="panelContent"></div>
     </div>
 
-    <div class="grid">
-        <a class="card" href="#shiitake">
-            <h3>Shiitake</h3>
-            <p>Lentinula edodes</p>
-        </a>
-        <!-- Add more cards -->
-    </div>
+    <script>
+        // Load mushroom data
+        fetch('mushrooms.json')
+            .then(response => response.json())
+            .then(data => {
+                const grid = document.getElementById('mushroomGrid');
+                
+                data.mushrooms.forEach(mushroom => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h2>${mushroom.commonName}</h2>
+                        <p class="scientific-name">${mushroom.scientificName}</p>
+                        <p>${mushroom.cultivationTips.substring(0, 100)}...</p>
+                    `;
+                    
+                    card.addEventListener('click', () => showPanel(mushroom));
+                    grid.appendChild(card);
+                });
+            });
 
-    <div id="shiitake" class="content">
-        <a href="#" class="close-btn">&times;</a>
-        <h2>Shiitake Mushroom</h2>
-        <p>Detailed content here...</p>
-    </div>
-    <!-- Add more content sections -->
-</div>
+        function showPanel(mushroom) {
+            const panel = document.getElementById('contentPanel');
+            const content = document.getElementById('panelContent');
+            
+            content.innerHTML = `
+                <h2>${mushroom.commonName}</h2>
+                <p class="scientific-name">${mushroom.scientificName}</p>
+                <img src="${mushroom.imagePath}" alt="${mushroom.commonName}" style="max-width: 100%; margin: 20px 0;">
+                <h3>Flavor Profile</h3>
+                <p>${mushroom.flavorProfile.description}</p>
+                <h3>Cultivation Tips</h3>
+                <p>${mushroom.cultivationTips}</p>
+                ${mushroom.etsyLink ? `<a href="${mushroom.etsyLink}" target="_blank">Purchase on Etsy</a>` : ''}
+            `;
+            
+            panel.classList.add('active');
+        }
+
+        function closePanel() {
+            document.getElementById('contentPanel').classList.remove('active');
+        }
+    </script>
 </body>
 </html> 
