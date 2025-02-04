@@ -32,10 +32,11 @@
       "commonName": "Shiitake",
       "scientificName": "Lentinula edodes",
       "imagePath": "images/shiitake.jpg",
-      "etsyLink": "#",
+      "etsyLink": "https://www.etsy.com/listings/shiitake",
       "alternateNames": ["Black Forest Mushroom", "Xiang Gu"],
       "flavorProfile": {
-        "description": "Rich, umami flavor with meaty texture"
+        "description": "Meaty texture with umami-rich, smoky notes",
+        "sources": []
       },
       "recipes": ["Stir-fries", "Dashi Broth"],
       "healthBenefits": {
@@ -51,7 +52,7 @@
         "description": "Cultivated in China for over 1,000 years",
         "sources": []
       },
-      "cultivationTips": "Grows best on hardwood logs like oak"
+      "cultivationTips": "Best grown on oak logs"
     },
     {
       "id": "maitake",
@@ -80,10 +81,11 @@
       "commonName": "Lion's Mane",
       "scientificName": "Hericium erinaceus",
       "imagePath": "images/lions-mane.jpg",
-      "etsyLink": "#",
+      "etsyLink": "https://www.etsy.com/listings/lionsmane",
       "alternateNames": ["Bearded Tooth", "Hedgehog Mushroom"],
       "flavorProfile": {
-        "description": "Delicate seafood-like flavor"
+        "description": "Delicate seafood-like flavor, similar to lobster",
+        "sources": []
       },
       "recipes": ["Lion's Mane 'Crab' Cakes", "Sautéed with Garlic"],
       "healthBenefits": {
@@ -94,7 +96,7 @@
         "description": "Used in traditional Chinese medicine for centuries",
         "sources": []
       },
-      "cultivationTips": "Prefers hardwood substrates in cool temperatures"
+      "cultivationTips": "Grows well on hardwood substrates"
     },
     {
       "id": "enoki",
