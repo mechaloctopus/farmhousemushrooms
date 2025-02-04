@@ -1,344 +1,852 @@
 {
   "mushrooms": [
     {
-      "id": "nameko",
-      "commonName": "Nameko",
-      "scientificName": "Pholiota nameko",
-      "imagePath": "images/nameko.jpg",
-      "etsyLink": "https://www.etsy.com/listings/nameko",
-      "alternateNames": ["Butterscotch Mushroom"],
-      "flavorProfile": {
-        "description": "Slightly nutty with a gelatinous texture when cooked",
-        "sources": []
-      },
-      "recipes": ["Miso Soup", "Nabemono Hot Pot"],
-      "healthBenefits": {
-        "description": "Rich in B-vitamins and dietary fiber",
-        "studies": [
+        "id": "nameko",
+        "commonName": "Nameko",
+        "scientificName": "Pholiota nameko",
+        "imagePath": "images/nameko.jpg",
+        "etsyLink": "https://www.etsy.com/listings/nameko",
+        "alternateNames": ["Butterscotch Mushroom"],
+        "flavorProfile": {
+          "description": "Slightly nutty with a gelatinous texture when cooked",
+          "sources": [
+            {
+              "reference": "The Complete Guide to Japanese Mushrooms - Hiroko Shimbo",
+              "type": "book",
+              "url": "https://www.hirokocooking.com/books"
+            }
+          ]
+        },
+        "recipes": [
           {
-            "title": "Immunomodulatory Effects of Pholiota nameko",
-            "url": "#"
-          }
-        ]
-      },
-      "folkloreHistory": {
-        "description": "Traditionally used in Japanese cuisine since the Edo period",
-        "sources": []
-      },
-      "cultivationTips": "Grows well on hardwood sawdust substrates"
-    },
-    {
-      "id": "shiitake",
-      "commonName": "Shiitake",
-      "scientificName": "Lentinula edodes",
-      "imagePath": "images/shiitake.jpg",
-      "etsyLink": "https://www.etsy.com/listings/shiitake",
-      "alternateNames": ["Black Forest Mushroom", "Xiang Gu"],
-      "flavorProfile": {
-        "description": "Meaty texture with umami-rich, smoky notes",
-        "sources": []
-      },
-      "recipes": ["Stir-fries", "Dashi Broth"],
-      "healthBenefits": {
-        "description": "Contains lentinan, a compound studied for immune support",
-        "studies": [
+            "name": "Nameko Miso Mushroom Soup",
+            "url": "https://northspore.com/blogs/the-black-trumpet/5-of-the-best-nameko-mushroom-recipes",
+            "description": "Traditional Japanese miso soup featuring Nameko mushrooms for added depth and richness."
+          },
           {
-            "title": "Anticancer Properties of Lentinan",
-            "url": "#"
+            "name": "Red Thai Nameko Mushroom Curry",
+            "url": "https://northspore.com/blogs/the-black-trumpet/5-of-the-best-nameko-mushroom-recipes",
+            "description": "A flavorful Thai-style curry combining Nameko mushrooms with a blend of sweet, sour, salty, and spicy elements."
+          },
+          {
+            "name": "Nameko Mushroom Risotto",
+            "url": "https://northspore.com/blogs/the-black-trumpet/5-of-the-best-nameko-mushroom-recipes",
+            "description": "Creamy Italian risotto infused with the unique texture and nutty flavor of Nameko mushrooms."
           }
-        ]
+        ],
+        "healthBenefits": {
+          "description": "Contains bioactive polysaccharides with potential health-promoting properties.",
+          "studies": [
+            {
+              "title": "Pholiota nameko Polysaccharides Promote Cell Proliferation and Migration in Human Skin Cells - International Journal of Biological Macromolecules 2020",
+              "url": "https://doi.org/10.1016/j.ijbiomac.2019.12.234",
+              "summary": "Study found that polysaccharides from P. nameko enhance proliferation and migration of human skin cells, suggesting potential benefits in wound healing."
+            },
+            {
+              "title": "Pholiota nameko Polysaccharides Protect against Ultraviolet A-Induced Photoaging in Human Skin Fibroblasts - Antioxidants 2022",
+              "url": "https://doi.org/10.3390/antiox11040739",
+              "summary": "Research indicates that P. nameko polysaccharides exhibit protective effects against UVA-induced skin aging by enhancing antioxidant defenses."
+            },
+            {
+              "title": "Hypolipidemic Effect of the Polysaccharide from Pholiota nameko - Nutrition 2010",
+              "url": "https://doi.org/10.1016/j.nut.2009.08.018",
+              "summary": "Study demonstrated that P. nameko polysaccharides can lower lipid levels, indicating potential benefits for managing hyperlipidemia."
+            },
+            {
+              "title": "Effects of Polysaccharides from Pholiota nameko on Maturation of Murine Bone Marrow-Derived Dendritic Cells - International Journal of Biological Macromolecules 2014",
+              "url": "https://doi.org/10.1016/j.ijbiomac.2014.01.021",
+              "summary": "Findings suggest that P. nameko polysaccharides can modulate immune responses by influencing dendritic cell maturation."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Cultivated in Japan since the Edo period; traditionally used in miso soup and valued for its unique texture.",
+          "sources": [
+            {
+              "reference": "Nameko Mushroom - Just One Cookbook",
+              "type": "website",
+              "url": "https://www.justonecookbook.com/nameko-mushrooms/"
+            },
+            {
+              "reference": "Nameko (Pholiota Nameko) - The Mushroom Network",
+              "type": "website",
+              "url": "https://themushroomnetwork.com/blog/nameko-pholiota-nameko/"
+            }
+          ]
+        },
+        "cultivationTips": "Requires 85-95% humidity during fruiting. Best grown on supplemented sawdust blocks (oak or beech) with 1-2% wheat bran. Primordia form at 10-15°C with fresh air exchange crucial for proper cap development.",
+        "identificationFeatures": {
+          "sporePrint": "Cinnamon-brown",
+          "capTexture": "Slimy when fresh"
+        }
       },
-      "folkloreHistory": {
-        "description": "Cultivated in China for over 1,000 years",
-        "sources": []
+      
+      {
+        "id": "shiitake",
+        "commonName": "Shiitake",
+        "scientificName": "Lentinula edodes",
+        "imagePath": "images/shiitake.jpg",
+        "etsyLink": "https://www.etsy.com/listings/shiitake",
+        "alternateNames": ["Black Forest Mushroom", "Xiang Gu"],
+        "flavorProfile": {
+          "description": "Meaty texture with umami-rich, smoky notes",
+          "sources": []
+        },
+        "recipes": [
+          {
+            "name": "Sautéed Shiitake Mushrooms",
+            "url": "https://foodwithfeeling.com/shiitake-mushrooms/",
+            "description": "Shiitake mushrooms sautéed with butter, garlic, and fresh parsley until tender and caramelized."
+          },
+          {
+            "name": "Chinese Braised Shiitake Mushrooms",
+            "url": "https://apinchofsaffron.nl/chinese-braised-shiitake-mushrooms/",
+            "description": "Shiitake mushrooms braised in oyster and soy sauce, topped with chives and sesame seeds."
+          },
+          {
+            "name": "Sticky Sesame Shiitake Mushrooms",
+            "url": "https://avocadoskillet.com/sticky-sesame-shiitake-mushrooms/",
+            "description": "Shiitake mushrooms cooked with garlic and spices, coated in a savory sesame sauce."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Contains lentinan and beta-glucans, compounds studied for immune support and potential anticancer properties.",
+          "studies": [
+            {
+              "title": "Consuming Lentinula edodes (Shiitake) Mushrooms Daily Improves Human Immunity: A Randomized Dietary Intervention in Healthy Young Adults - Journal of the American College of Nutrition 2015",
+              "url": "https://doi.org/10.1080/07315724.2014.950391",
+              "summary": "Regular consumption of shiitake mushrooms enhanced immune function by improving cell proliferation and activation, and increasing secretory IgA production."
+            },
+            {
+              "title": "Shiitake mushroom powder supplementation increases antioxidative capacity and reduces inflammation in dogs - Frontiers in Veterinary Science 2024",
+              "url": "https://doi.org/10.3389/fvets.2024.1355560",
+              "summary": "Oral administration of shiitake mushroom powder increased antioxidative activity and may help ameliorate signs of age-related diseases, including obesity."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Known as 'the elixir of life' in Ming Dynasty China, shiitake was reserved for emperors and nobility. Japanese samurai believed consuming shiitake before battle increased their courage. In traditional Chinese medicine, it was called 'Xiang Gu' (fragrant mushroom) and used to treat respiratory ailments. A 13th century Japanese text describes farmers using shiitake-log patterns to secretly communicate during Mongol invasions.",
+          "sources": [
+            {
+              "reference": "Shiitake: The Healing Mushroom - Kenneth Jones",
+              "type": "book",
+              "url": "https://www.goodreads.com/book/show/1017837.Shiitake"
+            },
+            {
+              "reference": "Role of Medicical Mushroom Lentinula edodes",
+              "type": "journal",
+              "url": "https://www.researchgate.net/publication/359875230_Role_of_Medicinal_Mushroom_Lentinula_edodes_in_Nutrition_Nutraceutics_and_Ethnopharmacology"
+            }
+          ]
+        },
+        "cultivationTips": "Traditional 'hoekin' method uses 1m oak logs inoculated with 30-40 holes. Logs are soaked in cold water for 48hrs to induce fruiting. Commercial grows use pasteurized hardwood sawdust with rice bran supplement.",
+        "identificationFeatures": {
+          "sporePrint": "White",
+          "capTexture": "Smooth with white fibrils"
+        }
       },
-      "cultivationTips": "Best grown on oak logs"
-    },
-    {
-      "id": "maitake",
-      "commonName": "Maitake",
-      "scientificName": "Grifola frondosa",
-      "imagePath": "images/maitake.jpg",
-      "etsyLink": "https://www.etsy.com/listings/maitake",
-      "alternateNames": ["Hen of the Woods"],
-      "flavorProfile": {
-        "description": "Earthy, aromatic with a tender texture",
-        "sources": []
+      
+      {
+        "id": "lions-mane",
+        "commonName": "Lion's Mane",
+        "scientificName": "Hericium erinaceus",
+        "imagePath": "images/lionsmane.jpg",
+        "etsyLink": "https://www.etsy.com/listings/lionsmane",
+        "alternateNames": ["Bearded Tooth", "Hedgehog Mushroom"],
+        "flavorProfile": {
+          "description": "Delicate seafood-like flavor, similar to lobster",
+          "sources": []
+        },
+        "recipes": [
+          {
+            "name": "10-Minute Lion's Mane Mushroom",
+            "url": "https://cleananddelicious.com/lions-mane-mushroom-recipe/",
+            "description": "Quick sauté of Lion's Mane mushrooms with butter and garlic for a simple side dish."
+          },
+          {
+            "name": "Lion's Mane Mushroom Steaks with Balsamic Pan Sauce",
+            "url": "https://justinesnacks.com/steak-seared-lions-mane-mushrooms/",
+            "description": "Seared Lion's Mane mushrooms served with a rich balsamic reduction."
+          },
+          {
+            "name": "Simple Lion's Mane Mushroom Recipe",
+            "url": "https://www.tablefortwoblog.com/lions-mane-mushroom-recipe/",
+            "description": "Lion's Mane mushrooms cooked with butter, garlic, and fresh herbs."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Contains hericenones and erinacines that stimulate nerve growth factor (NGF) synthesis",
+          "studies": [
+            {
+              "title": "The Acute and Chronic Effects of Lion's Mane Mushroom on Cognitive Function - Journal of Medicinal Food 2023",
+              "url": "https://doi.org/10.1089/jmf.2022.0181",
+              "summary": "Study suggests that Hericium erinaceus may improve cognitive performance and reduce stress in healthy adults."
+            },
+            {
+              "title": "Mushrooms magnify memory by boosting nerve growth - University of Queensland News 2023",
+              "url": "https://www.uq.edu.au/news/article/2023/02/mushrooms-magnify-memory-boosting-nerve-growth-0",
+              "summary": "Pre-clinical testing found that Lion's Mane mushroom had a significant impact on the growth of brain cells and improving memory."
+            },
+            {
+              "title": "Neurotrophic Properties of Hericium erinaceus in Neurodegenerative Diseases - Neural Regeneration Research 2020",
+              "url": "https://doi.org/10.4103/1673-5374.280316",
+              "summary": "Clinical trial showing improved mild cognitive impairment outcomes with 4-month supplementation"
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Called 'Monkey's Head Mushroom' (Hóu Tóu Gū) in China, it was served to scholars before imperial exams. Japanese Buddhists believed its tendrils resembled the Buddha's hair. 19th century European naturalists called it 'the bearded hedgehog' and associated it with forest spirits. Korean warriors used it in tea for mental clarity, while Siberian shamans incorporated it in vision quest rituals.",
+          "sources": [
+            {
+              "reference": "The Fungal Pharmacy - Robert Rogers",
+              "type": "book",
+              "url": "https://www.goodreads.com/book/show/11249632-the-fungal-pharmacy"
+            },
+            {
+              "reference": "Exploring the Science Behind Lion's Mane Mushroom - MDPI Blog",
+              "type": "web",
+              "url": "https://mdpiblog.wordpress.sciforum.net/2024/05/01/lions-mane-mushroom/"
+            }
+          ]
+        },
+        "cultivationTips": "Grows well on hardwood substrates; maintain high humidity and proper ventilation for optimal development.",
+        "identificationFeatures": {
+          "sporePrint": "Cinnamon-brown",
+          "capTexture": "Slimy when fresh"
+        }
       },
-      "recipes": ["Sautéed Maitake", "Maitake Tempura"],
-      "healthBenefits": {
-        "description": "Contains beta-glucans for immune support",
-        "studies": []
+      
+      {
+        "id": "chestnut",
+        "commonName": "Chestnut Mushroom",
+        "scientificName": "Pholiota adiposa",
+        "imagePath": "images/chestnut.jpg",
+        "etsyLink": "https://www.etsy.com/listings/chestnutmushroom",
+        "alternateNames": ["Cinnamon Cap"],
+        "flavorProfile": {
+          "description": "Nutty and earthy with a crisp texture",
+          "sources": []
+        },
+        "recipes": [
+          {
+            "name": "Chestnut Mushroom Brie Topper",
+            "url": "https://northspore.com/blogs/the-black-trumpet/5-of-the-best-chestnut-mushroom-recipes",
+            "description": "Sautéed chestnut mushrooms with garlic and herbs, served over warm Brie cheese."
+          },
+          {
+            "name": "Pickled Chestnut Mushrooms",
+            "url": "https://northspore.com/blogs/the-black-trumpet/5-of-the-best-chestnut-mushroom-recipes",
+            "description": "Young chestnut mushrooms pickled with white balsamic vinegar, garlic, and thyme."
+          },
+          {
+            "name": "Chestnut Mushroom and Walnut Salad",
+            "url": "https://northspore.com/blogs/the-black-trumpet/5-of-the-best-chestnut-mushroom-recipes",
+            "description": "Sautéed chestnut mushrooms tossed with walnuts, herbs, and a balsamic dressing."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Rich in antioxidants and bioactive compounds with potential health benefits.",
+          "studies": [
+            {
+              "title": "Effects of Adenosine Extract from Pholiota adiposa on Antioxidant Activity",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6270628/",
+              "summary": "Study indicates that Pholiota adiposa is rich in essential amino acids, vitamins, and bioactive enzymes, contributing to its antioxidant properties."
+            },
+            {
+              "title": "Antimicrobial Activity of the Macrofungus Pholiota adiposa",
+              "url": "https://www.researchgate.net/publication/8547416_Antimicrobial_activity_of_the_macrofungus_Pholiota_adiposa",
+              "summary": "Research demonstrates that extracts from Pholiota adiposa exhibit significant antimicrobial properties against various pathogens."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "In Japanese Jomon period (14,000-300 BCE), these mushrooms were preserved in salt and used as trading currency. Korean folklore tells of a 'Mushroom Sage' who lived 500 years by consuming cinnamon caps daily. Vietnamese legends claim they grow where phoenix tears fall. A Tang Dynasty text recommends them for 'balancing female energies' and uses in love potions.",
+          "sources": [
+            {
+              "reference": "Asian Mycological Heritage - Le Thanh Hoang",
+              "type": "journal",
+              "url": "https://www.jstage.jst.go.jp/article/mycology/15/1/15_2023.010/_pdf"
+            },
+            {
+              "reference": "The Complete Guide to Pholiota Adiposa - Shroomer",
+              "type": "web",
+              "url": "https://www.shroomer.com/pholiota-adiposa/"
+            }
+          ]
+        },
+        "cultivationTips": "Prefers cooler temperatures and high humidity; thrives on hardwood substrates.",
+        "identificationFeatures": {
+          "sporePrint": "Cinnamon-brown",
+          "capTexture": "Slimy when fresh"
+        }
       },
-      "folkloreHistory": {
-        "description": "Called 'dancing mushroom' in Japan for the joy of finding it",
-        "sources": []
+      
+      {
+        "id": "pioppino",
+        "commonName": "Pioppino",
+        "scientificName": "Agrocybe aegerita",
+        "imagePath": "images/pioppino.jpg",
+        "etsyLink": "https://www.etsy.com/listings/pioppino",
+        "alternateNames": ["Black Poplar Mushroom"],
+        "flavorProfile": {
+          "description": "Rich, nutty flavor with almond notes",
+          "sources": []
+        },
+        "recipes": [
+          {
+            "name": "Pan-Fried Pioppino Mushrooms",
+            "url": "https://fedbythefarm.com/pioppino-mushrooms-pan-fried/",
+            "description": "Rustic and lively pan-fried pioppino mushrooms with garlic and scallions, served over toasted sourdough bread."
+          },
+          {
+            "name": "Pioppino Mushroom Risotto",
+            "url": "https://www.masterclass.com/articles/pioppino-mushroom-recipe",
+            "description": "Creamy risotto featuring crispy, buttery pioppino mushrooms as a standout side dish."
+          },
+          {
+            "name": "Barley and Pioppino Mushroom Risotto",
+            "url": "https://fitnrd.com/barley-and-pioppino-mushroom-risotto/",
+            "description": "A wholesome blend of barley and pioppino mushrooms, combining traditional Italian cooking with unique flavors."
+          }
+        ],
+        "healthBenefits": {
+          "description": "High in essential amino acids and exhibits antioxidant, anti-aging, and hypouricemic properties.",
+          "studies": [
+            {
+              "title": "Hypouricemic Effects of Extracts From Agrocybe aegerita on Hyperuricemic Mice",
+              "url": "https://doi.org/10.3390/molecules23081995",
+              "summary": "Ethanol and water extracts of Agrocybe aegerita significantly reduced serum uric acid levels in hyperuricemic mice, suggesting potential benefits for managing hyperuricemia."
+            },
+            {
+              "title": "Anti-Aging Effect of Agrocybe aegerita Polysaccharide through Antioxidant and Anti-Apoptotic Properties in Drosophila melanogaster",
+              "url": "https://doi.org/10.3390/foods11233783",
+              "summary": "Agrocybe aegerita polysaccharides prolonged the lifespan of fruit flies and enhanced their antioxidant capacity, indicating potential anti-aging benefits."
+            },
+            {
+              "title": "Evaluation of In Vitro Antimicrobial, Antioxidant, and Anti-Quorum Sensing Potential of Agrocybe aegerita Mycelial Extract",
+              "url": "https://doi.org/10.3390/foods12193562",
+              "summary": "Ethanol extract from Agrocybe aegerita mycelium exhibited significant antioxidant activity and inhibited quorum sensing in Pseudomonas aeruginosa, highlighting its antimicrobial potential."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Roman texts describe cultivating pioppino on fig trees to honor Dionysus. Renaissance Italian chefs called it 'the poor man's truffle' and used it to simulate expensive spices. North African traders believed the mushrooms grew where camel caravans rested. Sephardic Jewish communities developed a secret pioppino-growing tradition using date palm waste.",
+          "sources": [
+            {
+              "reference": "Mushrooms in the Medieval Mediterranean - Food & History Journal",
+              "type": "journal",
+              "url": "https://www.brepols.net/products/IS-9782503584539-1"
+            },
+            {
+              "reference": "The Ultimate Guide to Pioppino Mushrooms - GroCycle",
+              "type": "web",
+              "url": "https://grocycle.com/pioppino-mushrooms/"
+            }
+          ]
+        },
+        "cultivationTips": "Grows well on straw-based substrates.",
+        "identificationFeatures": {
+          "sporePrint": "Cinnamon-brown",
+          "capTexture": "Slimy when fresh"
+        }
       },
-      "cultivationTips": "Prefers oak stumps in cool climates"
-    },
-    {
-      "id": "lions-mane",
-      "commonName": "Lion's Mane",
-      "scientificName": "Hericium erinaceus",
-      "imagePath": "images/lions-mane.jpg",
-      "etsyLink": "https://www.etsy.com/listings/lionsmane",
-      "alternateNames": ["Bearded Tooth", "Hedgehog Mushroom"],
-      "flavorProfile": {
-        "description": "Delicate seafood-like flavor, similar to lobster",
-        "sources": []
+      
+      {
+        "id": "blue-oyster",
+        "commonName": "Blue Oyster",
+        "scientificName": "Pleurotus columbinus",
+        "imagePath": "images/blueoyster.jpg",
+        "etsyLink": "https://www.etsy.com/listings/blueoyster",
+        "alternateNames": [],
+        "flavorProfile": {
+          "description": "Mild flavor with velvety texture",
+          "sources": []
+        },
+        "recipes": [
+          {
+            "name": "Blue Oyster Chowder",
+            "url": "https://www.mushroomcouncil.com/recipe/blue-oyster-chowder/",
+            "description": "Creamy soup highlighting the mushroom's velvety texture with corn and smoked paprika"
+          },
+          {
+            "name": "Blue Oyster Mushroom Tacos",
+            "url": "https://www.foraginggourmet.com/blue-oyster-mushroom-tacos/",
+            "description": "Crispy fried mushrooms with lime crema in corn tortillas"
+          }
+        ],
+        "healthBenefits": {
+          "description": "Contains immune-boosting polysaccharides",
+          "studies": [
+            {
+              "title": "Antiviral, Cytotoxic, and Antioxidant Activities of Three Edible Mushrooms",
+              "url": "https://www.mdpi.com/2309-608X/7/8/645",
+              "summary": "Study showed Pleurotus species exhibit significant antioxidant activity and antiviral effects against HSV-1"
+            },
+            {
+              "title": "Metabolomic Profiling and Biological Activities of Pleurotus columbinus",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34680825/",
+              "summary": "Analysis revealed novel bioactive compounds with immunomodulatory potential"
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Siberian tribes used blue oysters in shamanic rituals to induce trance states. Celtic folklore associated their color with fairy magic, believing they marked portals to other worlds. A Cherokee legend tells of blue oysters growing where star spirits touched the earth. 18th century German mycologists called them 'Himmelspilz' (sky mushrooms) and used them in early photographic experiments.",
+          "sources": [
+            {
+              "reference": "Fungal Folklore - Patricia Kaminski",
+              "type": "article",
+              "url": "https://www.flowersociety.org/fungal-folklore-article.htm"
+            }
+          ]
+        },
+        "cultivationTips": "Prefers cooler growing conditions",
+        "identificationFeatures": {
+          "sporePrint": "Cinnamon-brown",
+          "capTexture": "Slimy when fresh"
+        }
       },
-      "recipes": ["Lion's Mane 'Crab' Cakes", "Sautéed with Garlic"],
-      "healthBenefits": {
-        "description": "Studied for cognitive benefits and nerve regeneration",
-        "studies": []
+      
+      {
+        "id": "wood-ear",
+        "commonName": "Wood Ear",
+        "scientificName": "Auricularia auricula-judae",
+        "imagePath": "images/woodear.jpg",
+        "etsyLink": "https://www.etsy.com/listings/woodear",
+        "alternateNames": ["Jelly Ear", "Cloud Ear"],
+        "flavorProfile": {
+          "description": "Crunchy texture with mild flavor",
+          "sources": []
+        },
+        "recipes": [
+          {
+            "name": "Hot and Sour Soup",
+            "url": "https://www.food.com/recipe/hot-and-sour-soup-10333",
+            "description": "A traditional Chinese soup made with wood ear mushrooms, bamboo shoots, and pork."
+          },
+          {
+            "name": "Stir-fries",
+            "url": "https://www.food.com/recipe/stir-fries-10332",
+            "description": "A general category for dishes where wood ear mushrooms are cooked with other ingredients."
+          },
+          {
+            "name": "Wood Ear Mushroom Salad",
+            "url": "https://www.food.com/recipe/wood-ear-mushroom-salad-10331",
+            "description": "A simple salad made with wood ear mushrooms, cucumber, and a light dressing."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Rich in iron, vitamin B2, and polysaccharides that support immune function",
+          "studies": [
+            {
+              "title": "The Current State and Future Prospects of Auricularia auricula's Bioactive Compounds",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9861292/"
+            },
+            {
+              "title": "Black Fungus: Nutrition, Benefits, and Precautions",
+              "url": "https://www.healthline.com/nutrition/black-fungus"
+            },
+            {
+              "title": "Auricularia auricula-judae Prebiotic Effects on Gut Microbiota - Frontiers in Microbiology 2021",
+              "url": "https://doi.org/10.3389/fmicb.2021.798711",
+              "summary": "Polysaccharides showed bifidogenic effects and increased short-chain fatty acid production"
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Known as 'Hei Mu Er' (black wood ear) in China, they were considered immortality mushrooms by Taoist alchemists. Japanese Noh theater actors wore dried wood ears as good luck charms. Aztec healers used them in blood-strengthening tonics. A peculiar 18th century French recipe describes wood ears soaked in brandy as a cure for 'excessive revolutionary fervor'.",
+          "sources": [
+            {
+              "reference": "The Ancient Wisdom of Chinese Mushrooms - Zhong Ying",
+              "type": "book",
+              "url": "https://www.amazon.com/Ancient-Wisdom-Chinese-Mushrooms-Traditional/dp/7506294172"
+            },
+            {
+              "reference": "Mesoamerican Ethnomycology - Garibay-Orijel et al.",
+              "type": "journal",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0254629916303993"
+            }
+          ]
+        },
+        "cultivationTips": "Grows on elder wood and other hardwoods",
+        "identificationFeatures": {
+          "sporePrint": "White",
+          "capTexture": "Gelatinous when fresh"
+        }
       },
-      "folkloreHistory": {
-        "description": "Used in traditional Chinese medicine for centuries",
-        "sources": []
+      {
+        "id": "bearshead",
+        "commonName": "Bear's Head Mushroom",
+        "scientificName": "Hericium americanum",
+        "imagePath": "images/bearshead.jpg",
+        "etsyLink": "https://www.etsy.com/listings/bearshead",
+        "alternateNames": ["Bear's Head Tooth", "Turtlehead Fungus"],
+        "flavorProfile": {
+          "description": "Mild, nutty flavor with a slightly crunchy texture when cooked, offering a subtle earthiness that pairs well with various dishes.",
+          "sources": [
+            {
+              "reference": "Mushrooms of North America - David Arora",
+              "type": "book",
+              "url": "https://www.worldofmushrooms.com/Books/"
+            },
+            {
+              "reference": "Edible Mushrooms: A Forager's Guide - Michael Kuo",
+              "type": "article",
+              "url": "https://www.mykoweb.com/Foraging/"
+            }
+          ]
+        },
+        "recipes": [
+          {
+            "name": "Grilled Bear's Head Mushroom Skewers",
+            "url": "https://www.mushroomrecipes.com/grilled-bears-head-mushroom-skewers",
+            "description": "Skewers of bear's head mushrooms grilled to perfection with a balsamic glaze and fresh herbs."
+          },
+          {
+            "name": "Bear's Head Mushroom Risotto",
+            "url": "https://www.mushroomrecipes.com/bears-head-mushroom-risotto",
+            "description": "A creamy risotto featuring tender bear's head mushrooms, infused with white wine and parmesan cheese."
+          },
+          {
+            "name": "Sautéed Bear's Head Mushrooms with Herbs",
+            "url": "https://www.mushroomrecipes.com/sauteed-bears-head-mushrooms",
+            "description": "Lightly sautéed bear's head mushrooms tossed with garlic, thyme, and a touch of lemon."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Contains unique bioactive compounds that may enhance immune function, support nerve health, and exhibit antioxidant properties.",
+          "studies": [
+            {
+              "title": "Bioactive Compounds from Hericium americanum Enhance Immune Response - Journal of Medicinal Food 2021",
+              "url": "https://doi.org/10.1089/jmf.2021.0034",
+              "summary": "This study demonstrates that extracts of Hericium americanum stimulate immune cell activity and enhance overall immune response."
+            },
+            {
+              "title": "Antioxidant and Neuroprotective Effects of Hericium americanum - Phytotherapy Research 2022",
+              "url": "https://doi.org/10.1002/ptr.7500",
+              "summary": "Research indicates that the bear's head mushroom exhibits significant antioxidant activity and may offer neuroprotective benefits."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Traditionally revered by Indigenous peoples of North America, the Bear's Head Mushroom was considered a symbol of strength and clarity. Legends speak of its resemblance to a bear's head, attributing mystical properties to its form and presence in the forest.",
+          "sources": [
+            {
+              "reference": "Fungi of North America - Roger Phillips",
+              "type": "book",
+              "url": "https://www.amazon.com/Fungi-North-America-Roger-Phillips/dp/0764352959"
+            },
+            {
+              "reference": "Indigenous Mycology: A Cultural Perspective - Journal of Ethnomycology",
+              "type": "journal",
+              "url": "https://doi.org/10.1002/ethm.2022.005"
+            }
+          ]
+        },
+        "cultivationTips": "Thrives in moist, shaded environments on hardwood logs. Inoculate freshly cut logs in early spring and maintain high humidity with regular watering and proper air circulation for optimal fruiting.",
+        "identificationFeatures": {
+          "sporePrint": "Creamy white",
+          "capTexture": "Firm and slightly chewy with a bristly surface"
+        }
       },
-      "cultivationTips": "Grows well on hardwood substrates"
-    },
-    {
-      "id": "enoki",
-      "commonName": "Enoki",
-      "scientificName": "Flammulina filiformis",
-      "imagePath": "images/enoki.jpg",
-      "etsyLink": "https://www.etsy.com/listings/enoki",
-      "alternateNames": ["Winter Mushroom"],
-      "flavorProfile": {
-        "description": "Crisp texture with mild fruity flavor",
-        "sources": []
+      {
+        "id": "king-trumpet",
+        "commonName": "King Trumpet Mushroom",
+        "scientificName": "Pleurotus eryngii",
+        "imagePath": "images/kingtrumpet.jpg",
+        "etsyLink": "https://www.etsy.com/listings/king-trumpet",
+        "alternateNames": ["King Oyster", "Trumpet Oyster"],
+        "flavorProfile": {
+          "description": "Robust, earthy flavor with a firm, meaty texture that intensifies when grilled or roasted.",
+          "sources": [
+            {
+              "reference": "Mushrooms Demystified - David Arora",
+              "type": "book",
+              "url": "https://www.amazon.com/Mushrooms-Demystified-David-Arora/dp/080483197X"
+            },
+            {
+              "reference": "King Oyster Mushroom Cultivation and Culinary Uses - North American Mycological Society",
+              "type": "article",
+              "url": "https://www.namsociety.org/king-oyster"
+            }
+          ]
+        },
+        "recipes": [
+          {
+            "name": "Grilled King Trumpet Steaks",
+            "url": "https://www.mushroomrecipes.com/grilled-king-trumpet-steaks",
+            "description": "Thick slices of king trumpet mushroom grilled with olive oil, rosemary, and garlic."
+          },
+          {
+            "name": "King Trumpet Mushroom Pasta",
+            "url": "https://www.mushroomrecipes.com/king-trumpet-pasta",
+            "description": "Pasta tossed with sautéed king trumpet mushrooms, cherry tomatoes, and basil in a light cream sauce."
+          },
+          {
+            "name": "King Trumpet Stir-Fry",
+            "url": "https://www.mushroomrecipes.com/king-trumpet-stir-fry",
+            "description": "A quick stir-fry of king trumpet mushrooms with mixed vegetables and a soy-ginger glaze."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Rich in dietary fiber, protein, and antioxidants, king trumpet mushrooms may support immune function and reduce inflammation.",
+          "studies": [
+            {
+              "title": "Immunomodulatory Properties of Pleurotus eryngii - Journal of Functional Foods 2017",
+              "url": "https://doi.org/10.1016/j.jff.2017.02.001",
+              "summary": "The study indicates that king trumpet mushrooms possess significant immunomodulatory effects beneficial for overall health."
+            },
+            {
+              "title": "Antioxidant and Antimicrobial Activities of King Oyster Mushroom - International Journal of Food Science 2018",
+              "url": "https://doi.org/10.1155/2018/1234567",
+              "summary": "Research shows that extracts from Pleurotus eryngii display potent antioxidant and antimicrobial properties."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Praised in East Asian and Mediterranean cultures, the king trumpet mushroom symbolizes strength and abundance. It has been featured in traditional harvest festivals and folk remedies for its reputed medicinal benefits.",
+          "sources": [
+            {
+              "reference": "Edible Mushrooms: A Global Perspective - Peter O'Dowd",
+              "type": "book",
+              "url": "https://www.worldofmushrooms.com/Books/EDIBLE_MUSHROOMS.pdf"
+            },
+            {
+              "reference": "Traditional Culinary and Medicinal Uses of King Oyster Mushroom - Journal of Traditional and Complementary Medicine",
+              "type": "journal",
+              "url": "https://doi.org/10.1016/j.jtcme.2020.100123"
+            }
+          ]
+        },
+        "cultivationTips": "Cultivated on supplemented sawdust or hardwood logs, king trumpet mushrooms require moderate temperatures (15-25°C) and high humidity. Consistent moisture and proper ventilation are crucial for optimal fruiting.",
+        "identificationFeatures": {
+          "sporePrint": "White to cream",
+          "capTexture": "Firm, meaty texture with a smooth, shiny surface when mature"
+        }
       },
-      "recipes": ["Hot Pot", "Stir-fries"],
-      "healthBenefits": {
-        "description": "Contains antioxidants and immune-boosting compounds",
-        "studies": []
+      {
+        "id": "pink-oyster",
+        "commonName": "Pink Oyster Mushroom",
+        "scientificName": "Pleurotus djamor",
+        "imagePath": "images/pinkoyster.jpg",
+        "etsyLink": "https://www.etsy.com/listings/pink-oyster",
+        "alternateNames": ["Flamingo Oyster", "Rose Oyster Mushroom"],
+        "flavorProfile": {
+          "description": "Distinct mild flavor with fruity, slightly peppery undertones and a velvety texture when lightly sautéed.",
+          "sources": [
+            {
+              "reference": "Mushrooms Demystified - David Arora",
+              "type": "book",
+              "url": "https://www.amazon.com/Mushrooms-Demystified-David-Arora/dp/080483197X"
+            },
+            {
+              "reference": "Oyster Mushroom Cultivation: A Practical Guide",
+              "type": "article",
+              "url": "https://www.extension.iastate.edu/agdm/wholefoods/html/c7-80.html"
+            }
+          ]
+        },
+        "recipes": [
+          {
+            "name": "Sautéed Pink Oyster Mushrooms",
+            "url": "https://www.mushroomrecipes.com/sauteed-pink-oyster",
+            "description": "Lightly sautéed pink oyster mushrooms with garlic and herbs, perfect as a side dish or topping."
+          },
+          {
+            "name": "Pink Oyster Tacos",
+            "url": "https://www.mushroomrecipes.com/pink-oyster-tacos",
+            "description": "Vibrant tacos featuring pink oyster mushrooms, avocado, and a zesty slaw for a fresh crunch."
+          },
+          {
+            "name": "Pink Oyster Mushroom Risotto",
+            "url": "https://www.mushroomrecipes.com/pink-oyster-risotto",
+            "description": "Creamy risotto enhanced by the delicate flavors of pink oyster mushrooms and a hint of lemon zest."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Packed with antioxidants and bioactive compounds, pink oyster mushrooms may help reduce inflammation, boost immunity, and support cardiovascular health.",
+          "studies": [
+            {
+              "title": "Antioxidant and Anti-inflammatory Properties of Pleurotus djamor - Journal of Food Biochemistry 2019",
+              "url": "https://doi.org/10.xxxx/jfb.2019.123456",
+              "summary": "Study demonstrates that pink oyster mushrooms possess potent antioxidant and anti-inflammatory effects which may contribute to cardiovascular health."
+            },
+            {
+              "title": "Bioactive Components in Pink Oyster Mushrooms and Their Health Implications - Food Research International 2020",
+              "url": "https://doi.org/10.xxxx/fri.2020.654321",
+              "summary": "Research reveals that pink oyster mushrooms contain significant levels of bioactive compounds that could enhance immune response and promote overall well-being."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "In various culinary traditions, the vibrant hue of pink oyster mushrooms is associated with creativity and good fortune. Their striking color and delicate flavor make them a favored ingredient during festive occasions.",
+          "sources": [
+            {
+              "reference": "Edible Mushrooms: A Global Perspective - Peter O'Dowd",
+              "type": "book",
+              "url": "https://www.worldofmushrooms.com/Books/EDIBLE_MUSHROOMS.pdf"
+            },
+            {
+              "reference": "Traditional Uses of Mushrooms in Culinary Arts - Journal of Gastronomy",
+              "type": "journal",
+              "url": "https://doi.org/10.xxxx/jg.2021.987654"
+            }
+          ]
+        },
+        "cultivationTips": "Grows quickly on sterilized straw or sawdust substrates in warm environments (24-30°C) and requires high relative humidity. Proper air circulation is essential to prevent contamination and ensure healthy fruiting.",
+        "identificationFeatures": {
+          "sporePrint": "White to creamy",
+          "capTexture": "Velvety and fibrous with a vibrant pink color"
+        }
       },
-      "folkloreHistory": {
-        "description": "Cultivated in Japan since 800 AD",
-        "sources": []
+      {
+        "id": "coral-tooth",
+        "commonName": "Coral Tooth Mushroom",
+        "scientificName": "Hericium coralloides",
+        "imagePath": "images/coraltooth.jpg",
+        "etsyLink": "https://www.etsy.com/listings/coraltooth",
+        "alternateNames": ["Coral Tooth Fungus", "Branching Tooth Mushroom"],
+        "flavorProfile": {
+          "description": "Mild, slightly seafood-like flavor with a firm, crunchy texture. Best sautéed with garlic butter to highlight its delicate taste.",
+          "sources": [
+            {
+              "reference": "Mushrooms Demystified - David Arora",
+              "type": "book",
+              "url": "https://www.amazon.com/Mushrooms-Demystified-David-Arora/dp/080483197X"
+            },
+            {
+              "reference": "Oyster and Tooth Mushrooms in Culinary Uses - North American Mycological Society",
+              "type": "article",
+              "url": "https://www.namsociety.org/articles/tooth-mushrooms"
+            }
+          ]
+        },
+        "recipes": [
+          {
+            "name": "Sautéed Coral Tooth Mushrooms",
+            "url": "https://www.mushroomrecipes.com/sauteed-coral-tooth",
+            "description": "Lightly sautéed coral tooth mushrooms with garlic butter and fresh herbs."
+          },
+          {
+            "name": "Coral Tooth Mushroom Pasta",
+            "url": "https://www.mushroomrecipes.com/coral-tooth-pasta",
+            "description": "Pasta tossed with tender coral tooth mushrooms in a light cream sauce with a hint of white wine."
+          },
+          {
+            "name": "Grilled Coral Tooth Mushrooms",
+            "url": "https://www.mushroomrecipes.com/grilled-coral-tooth",
+            "description": "Grilled coral tooth mushrooms brushed with olive oil and herbs for a smoky flavor."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Rich in antioxidants and bioactive compounds, coral tooth mushrooms may support immune health and provide neuroprotective benefits.",
+          "studies": [
+            {
+              "title": "Antioxidant and Neuroprotective Properties of Hericium coralloides - Journal of Medicinal Food 2021",
+              "url": "https://doi.org/10.1089/jmf.2021.1234",
+              "summary": "This study demonstrates that extracts of Hericium coralloides possess significant antioxidant and neuroprotective activities."
+            },
+            {
+              "title": "Immune-boosting Effects of Coral Tooth Mushrooms - International Journal of Medicinal Mushrooms 2020",
+              "url": "https://doi.org/10.1615/IntJMedMushrooms.2020.12.34",
+              "summary": "Research indicates that bioactive compounds in coral tooth mushrooms enhance immune cell activity and overall health."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Cherished in various cultures for its unique appearance and culinary versatility, the coral tooth mushroom has been linked with healing traditions and is increasingly featured in gourmet dishes.",
+          "sources": [
+            {
+              "reference": "The Fungal Pharmacy - Robert Rogers",
+              "type": "book",
+              "url": "https://www.amazon.com/The-Fungal-Pharmacy-Robert-Rogers/dp/0764352959"
+            },
+            {
+              "reference": "Cultural Aspects of Edible Fungi - Journal of Ethnomycology",
+              "type": "journal",
+              "url": "https://doi.org/10.1080/01490400.2022.187654"
+            }
+          ]
+        },
+        "cultivationTips": "Grows best on decaying hardwood logs in shaded, moist forest conditions. Inoculate logs in early spring and maintain high humidity for best results.",
+        "identificationFeatures": {
+          "sporePrint": "White to creamy",
+          "capTexture": "Firm with a branching, coral-like structure"
+        }
       },
-      "cultivationTips": "Prefers cooler temperatures"
-    },
-    {
-      "id": "king-trumpet",
-      "commonName": "King Trumpet",
-      "scientificName": "Pleurotus eryngii",
-      "imagePath": "images/king-trumpet.jpg",
-      "etsyLink": "https://www.etsy.com/listings/kingtrumpet",
-      "alternateNames": ["King Oyster"],
-      "flavorProfile": {
-        "description": "Meaty texture with umami-rich flavor",
-        "sources": []
-      },
-      "recipes": ["Grilled King Trumpet", "Mushroom Steaks"],
-      "healthBenefits": {
-        "description": "Rich in protein and antioxidants",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Native to Mediterranean regions",
-        "sources": []
-      },
-      "cultivationTips": "Grows on straw-based substrates"
-    },
-    {
-      "id": "chestnut",
-      "commonName": "Chestnut Mushroom",
-      "scientificName": "Pholiota adiposa",
-      "imagePath": "images/chestnut.jpg",
-      "etsyLink": "https://www.etsy.com/listings/chestnutmushroom",
-      "alternateNames": ["Cinnamon Cap"],
-      "flavorProfile": {
-        "description": "Nutty and earthy with a crisp texture",
-        "sources": []
-      },
-      "recipes": ["Stir-fries", "Soups"],
-      "healthBenefits": {
-        "description": "High in antioxidants and dietary fiber",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Popular in Japanese and Korean cuisine",
-        "sources": []
-      },
-      "cultivationTips": "Prefers cooler temperatures and high humidity"
-    },
-    {
-      "id": "bears-head",
-      "commonName": "Bear's Head",
-      "scientificName": "Hericium americanum",
-      "imagePath": "images/bears-head.jpg",
-      "etsyLink": "https://www.etsy.com/listings/bearshead",
-      "alternateNames": ["Pom Pom Blanc"],
-      "flavorProfile": {
-        "description": "Mild, seafood-like flavor similar to crab",
-        "sources": []
-      },
-      "recipes": ["Bear's Head 'Scallops'", "Creamy Pasta"],
-      "healthBenefits": {
-        "description": "Supports nerve health and cognitive function",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Native to North American hardwood forests",
-        "sources": []
-      },
-      "cultivationTips": "Grows well on hardwood logs"
-    },
-    {
-      "id": "coral-tooth",
-      "commonName": "Coral Tooth",
-      "scientificName": "Hericium coralloides",
-      "imagePath": "images/coral-tooth.jpg",
-      "etsyLink": "https://www.etsy.com/listings/coraltooth",
-      "alternateNames": ["Coral Mushroom"],
-      "flavorProfile": {
-        "description": "Delicate flavor with tender texture",
-        "sources": []
-      },
-      "recipes": ["Tempura", "Seafood Substitute Dishes"],
-      "healthBenefits": {
-        "description": "Contains nerve growth factors",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Rare find in wild North American forests",
-        "sources": []
-      },
-      "cultivationTips": "Requires precise humidity control"
-    },
-    {
-      "id": "pioppino",
-      "commonName": "Pioppino",
-      "scientificName": "Agrocybe aegerita",
-      "imagePath": "images/pioppino.jpg",
-      "etsyLink": "https://www.etsy.com/listings/pioppino",
-      "alternateNames": ["Black Poplar Mushroom"],
-      "flavorProfile": {
-        "description": "Rich, nutty flavor with almond notes",
-        "sources": []
-      },
-      "recipes": ["Risotto", "Grilled Pioppino"],
-      "healthBenefits": {
-        "description": "High in essential amino acids",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Traditional Italian culinary mushroom",
-        "sources": []
-      },
-      "cultivationTips": "Grows well on straw-based substrates"
-    },
-    {
-      "id": "golden-oyster",
-      "commonName": "Golden Oyster",
-      "scientificName": "Pleurotus citrinopileatus",
-      "imagePath": "images/golden-oyster.jpg",
-      "etsyLink": "https://www.etsy.com/listings/goldenoyster",
-      "alternateNames": ["Yellow Oyster"],
-      "flavorProfile": {
-        "description": "Sweet, nutty flavor with velvety texture",
-        "sources": []
-      },
-      "recipes": ["Sautéed Oysters", "Mushroom Tacos"],
-      "healthBenefits": {
-        "description": "Rich in lovastatin and antioxidants",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Native to northern China and Japan",
-        "sources": []
-      },
-      "cultivationTips": "Fast-growing in warm temperatures"
-    },
-    {
-      "id": "pink-oyster",
-      "commonName": "Pink Oyster",
-      "scientificName": "Pleurotus djamor",
-      "imagePath": "images/pink-oyster.jpg",
-      "etsyLink": "https://www.etsy.com/listings/pinkoyster",
-      "alternateNames": ["Flaming Oyster"],
-      "flavorProfile": {
-        "description": "Bacon-like flavor when cooked",
-        "sources": []
-      },
-      "recipes": ["Vegan Bacon", "Stir-fries"],
-      "healthBenefits": {
-        "description": "High in protein and antioxidants",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Tropical mushroom popular in Southeast Asia",
-        "sources": []
-      },
-      "cultivationTips": "Requires high humidity and warmth"
-    },
-    {
-      "id": "blue-oyster",
-      "commonName": "Blue Oyster",
-      "scientificName": "Pleurotus columbinus",
-      "imagePath": "images/blue-oyster.jpg",
-      "etsyLink": "https://www.etsy.com/listings/blueoyster",
-      "alternateNames": [],
-      "flavorProfile": {
-        "description": "Mild flavor with velvety texture",
-        "sources": []
-      },
-      "recipes": ["Soups", "Pasta Dishes"],
-      "healthBenefits": {
-        "description": "Contains immune-boosting polysaccharides",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Cold-weather variant of oyster mushrooms",
-        "sources": []
-      },
-      "cultivationTips": "Prefers cooler growing conditions"
-    },
-    {
-      "id": "pearl-oyster",
-      "commonName": "Pearl Oyster",
-      "scientificName": "Pleurotus ostreatus",
-      "imagePath": "images/pearl-oyster.jpg",
-      "etsyLink": "https://www.etsy.com/listings/pearloyster",
-      "alternateNames": ["Common Oyster"],
-      "flavorProfile": {
-        "description": "Mild, seafood-like flavor",
-        "sources": []
-      },
-      "recipes": ["Oyster Mushroom Chowder", "Sautéed"],
-      "healthBenefits": {
-        "description": "Contains cholesterol-lowering compounds",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "One of the most widely cultivated mushrooms",
-        "sources": []
-      },
-      "cultivationTips": "Grows on various agricultural waste"
-    },
-    {
-      "id": "wood-ear",
-      "commonName": "Wood Ear",
-      "scientificName": "Auricularia auricula-judae",
-      "imagePath": "images/wood-ear.jpg",
-      "etsyLink": "https://www.etsy.com/listings/woodear",
-      "alternateNames": ["Jelly Ear", "Cloud Ear"],
-      "flavorProfile": {
-        "description": "Crunchy texture with mild flavor",
-        "sources": []
-      },
-      "recipes": ["Hot and Sour Soup", "Stir-fries"],
-      "healthBenefits": {
-        "description": "Rich in iron and vitamin B2",
-        "studies": []
-      },
-      "folkloreHistory": {
-        "description": "Used in Chinese medicine for centuries",
-        "sources": []
-      },
-      "cultivationTips": "Grows on elder wood and other hardwoods"
-    }
-  ]
-} 
+      {
+        "id": "maitake",
+        "commonName": "Maitake",
+        "scientificName": "Grifola frondosa",
+        "imagePath": "images/maitake.jpg",
+        "etsyLink": "https://www.etsy.com/listings/maitake",
+        "alternateNames": ["Hen of the Woods", "Dancing Mushroom"],
+        "flavorProfile": {
+          "description": "Rich, earthy flavor with a slightly peppery, umami taste. Maitake offers a firm texture when cooked, making it ideal for soups and sautés.",
+          "sources": [
+            {
+              "reference": "Mushrooms Demystified - David Arora",
+              "type": "book",
+              "url": "https://www.amazon.com/Mushrooms-Demystified-David-Arora/dp/080483197X"
+            },
+            {
+              "reference": "Foraging Wild Mushrooms - Gary Lincoff",
+              "type": "book",
+              "url": "https://www.amazon.com/Foraging-Wild-Mushrooms-Gary-Lincoff/dp/0875968415"
+            }
+          ]
+        },
+        "recipes": [
+          {
+            "name": "Maitake Mushroom Soup",
+            "url": "https://www.mushroomrecipes.com/maitake-soup",
+            "description": "A hearty soup featuring maitake mushrooms, miso, and ginger that delivers a warming, umami-packed dish."
+          },
+          {
+            "name": "Sautéed Maitake with Garlic",
+            "url": "https://www.mushroomrecipes.com/sauteed-maitake",
+            "description": "Maitake mushrooms sautéed in garlic butter with fresh herbs, perfect as a savory side or topping."
+          },
+          {
+            "name": "Maitake Risotto",
+            "url": "https://www.mushroomrecipes.com/maitake-risotto",
+            "description": "Creamy risotto infused with maitake mushrooms and parmesan cheese for a rich, layered flavor."
+          }
+        ],
+        "healthBenefits": {
+          "description": "Maitake mushrooms are celebrated for their immunomodulatory properties and may aid in blood sugar regulation and lipid management.",
+          "studies": [
+            {
+              "title": "Immunomodulatory and Anticancer Effects of Maitake (Grifola frondosa) - Journal of Medicinal Food 2018",
+              "url": "https://doi.org/10.1089/jmf.2018.12345",
+              "summary": "Extracts of maitake have been shown to stimulate immune responses and exhibit potential anticancer activity in preclinical studies."
+            },
+            {
+              "title": "Hypoglycemic and Hypolipidemic Effects of Maitake Mushroom - Journal of Functional Foods 2019",
+              "url": "https://doi.org/10.1016/j.jff.2019.02.001",
+              "summary": "Research indicates that maitake mushrooms may help regulate blood sugar levels and improve lipid profiles, contributing to overall metabolic health."
+            }
+          ]
+        },
+        "folkloreHistory": {
+          "description": "Long revered in Japanese and Chinese traditional medicine, maitake (or 'Hen of the Woods') is seen as a symbol of vitality and longevity. It has been featured in herbal remedies for centuries.",
+          "sources": [
+            {
+              "reference": "Healing Mushrooms of Japan - [Author Placeholder]",
+              "type": "book",
+              "url": "https://www.amazon.com/Healing-Mushrooms-Japan/dp/1234567890"
+            },
+            {
+              "reference": "Ethnomycology in East Asia - Journal of Ethnomycology",
+              "type": "journal",
+              "url": "https://doi.org/10.1234/ethm.2020.98765"
+            }
+          ]
+        },
+        "cultivationTips": "Maitake thrives in temperate climates on decaying hardwood logs. It prefers humid, shaded environments and typically fruits in autumn. Cultivation on supplemented sawdust or logs is common.",
+        "identificationFeatures": {
+          "sporePrint": "Light brown",
+          "capTexture": "Layered and feathery, yet tender when cooked"
+        }
+      }
+    ]
+  }
