@@ -8,6 +8,43 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => initializeMushrooms(data.mushrooms))
     .catch(error => console.error('Error:', error));
 
+  // Menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('theSidebar');
+  
+  menuToggle.addEventListener('click', function() {
+    sidebar.classList.toggle('active');
+  });
+
+  // Card click handling
+  document.querySelectorAll('.grid__item').forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const content = document.querySelector('.content');
+      
+      // Hide all content items
+      document.querySelectorAll('.content__item').forEach(article => {
+        article.classList.remove('active');
+      });
+      
+      // Show target content
+      const targetArticle = document.querySelector(targetId);
+      if (targetArticle) {
+        targetArticle.classList.add('active');
+        content.classList.add('active');
+      }
+    });
+  });
+
+  // Close button handling
+  document.querySelector('.content .close-button').addEventListener('click', function() {
+    document.querySelector('.content').classList.remove('active');
+    document.querySelectorAll('.content__item').forEach(article => {
+      article.classList.remove('active');
+    });
+  });
+
   function initializeMushrooms(mushrooms) {
     const grid = document.getElementById('mushroom-grid');
     const content = document.getElementById('mushroom-content');
@@ -52,18 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </article>`;
       content.insertAdjacentHTML('beforeend', contentHtml);
     });
-
-    // Add click handlers
-    document.querySelectorAll('.grid__item').forEach(item => {
-      item.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        showContentArticle(targetId);
-      });
-    });
-
-    // Close button handler
-    document.querySelector('.content .close-button').addEventListener('click', hideContent);
   }
 
   function createDetailSection(title, content) {
@@ -83,20 +108,5 @@ document.addEventListener('DOMContentLoaded', function() {
           ${items.map(item => `<li>${item}</li>`).join('')}
         </ul>
       </div>`;
-  }
-
-  function showContentArticle(id) {
-    document.querySelectorAll('.content__item').forEach(article => {
-      article.classList.remove('active');
-    });
-    const target = document.getElementById(id);
-    if (target) {
-      target.classList.add('active');
-      document.querySelector('.content').classList.add('active');
-    }
-  }
-
-  function hideContent() {
-    document.querySelector('.content').classList.remove('active');
   }
 }); 
