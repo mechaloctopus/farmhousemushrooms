@@ -1,24 +1,33 @@
 {
   "mushrooms": [
     {
+      "id": "shiitake",
       "commonName": "Shiitake",
       "scientificName": "Lentinula edodes",
-      "cultivationTips": "Grows best on hardwood logs like oak",
       "imagePath": "images/shiitake.jpg",
       "etsyLink": "#",
-      "flavorProfile": {
-        "description": "Rich, umami flavor with meaty texture"
-      }
+      "flavorProfile": { "description": "Rich, umami flavor with meaty texture" },
+      "cultivationTips": "Grows best on hardwood logs like oak"
     },
     {
+      "id": "lions-mane",
       "commonName": "Lion's Mane",
       "scientificName": "Hericium erinaceus",
-      "cultivationTips": "Prefers hardwood substrates in cool temperatures",
       "imagePath": "images/lions-mane.jpg",
       "etsyLink": "#",
-      "flavorProfile": {
-        "description": "Delicate seafood-like flavor"
-      }
-    }
+      "flavorProfile": { "description": "Delicate seafood-like flavor" },
+      "cultivationTips": "Prefers hardwood substrates in cool temperatures"
+    },
+    {
+      "id": "oyster",
+      "commonName": "Oyster Mushroom",
+      "scientificName": "Pleurotus ostreatus",
+      "imagePath": "images/oyster.jpg",
+      "etsyLink": "#",
+      "flavorProfile": { "description": "Mild, subtle flavor with velvety texture" },
+      "cultivationTips": "Thrives on straw and coffee grounds"
+    },
+    // Add remaining 12 mushroom entries here
+    // ...
   ]
 } 
