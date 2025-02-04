@@ -81,8 +81,6 @@
             height: 100vh;
             background: var(--secondary);
             box-shadow: -4px 0 24px rgba(0,0,0,0.3);
-            padding: 2rem;
-            overflow-y: auto;
             transition: var(--transition);
             z-index: 1000;
         }
@@ -133,6 +131,12 @@
             border-bottom: 2px solid var(--accent);
             padding-bottom: 0.5rem;
         }
+
+        .panel-scroll {
+            overflow-y: auto;
+            height: 100%;
+            padding: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -142,7 +146,9 @@
 
     <div class="content-panel" id="contentPanel">
         <button class="close-btn" onclick="closePanel()">&times;</button>
-        <div class="panel-content" id="panelContent"></div>
+        <div class="panel-scroll">
+            <div class="panel-content" id="panelContent"></div>
+        </div>
     </div>
 
     <script src="script.js" type="module"></script>
