@@ -7,17 +7,29 @@ const MushroomUI = (() => {
   };
 
   // Template generators
-  const cardTemplate = ({ imagePath, commonName, scientificName }) => `
-    <div class="card">
-      ${imagePath ? `<img src="${imagePath}" alt="${commonName}" class="card-image" loading="lazy">` : ''}
-      <h2>${commonName}</h2>
-      <p class="scientific-name">${scientificName}</p>
+  const cardTemplate = (mushroom) => `
+    <div class="card" data-mushroom="${encodeURIComponent(JSON.stringify(mushroom))}">
+      ${mushroom.imagePath ? `<img src="${mushroom.imagePath}" alt="${mushroom.commonName}" class="card-image" loading="lazy">` : ''}
+      <div class="card-content">
+        <h2>${mushroom.commonName}</h2>
+        <p class="scientific-name">${mushroom.scientificName}</p>
+        <div class="card-info">
+          <div class="price-bubble">${mushroom.price}</div>
+          <a href="${mushroom.etsyLink}" target="_blank" class="genetics-btn">Our Genetics</a>
+          <button class="stock-btn" title="${mushroom.stockSchedule}">Stock: ${mushroom.stockStatus}</button>
+        </div>
+      </div>
     </div>
   `;
 
   const panelTemplate = (mushroom) => `
     <h2>${mushroom.commonName}</h2>
     <p class="scientific-name">${mushroom.scientificName}</p>
+    <div class="panel-info">
+      <div class="price-bubble">${mushroom.price}</div>
+      <a href="${mushroom.etsyLink}" target="_blank" class="genetics-btn">Our Genetics</a>
+      <button class="stock-btn" title="${mushroom.stockSchedule}">Stock: ${mushroom.stockStatus}</button>
+    </div>
     ${mushroom.imagePath ? `<img src="${mushroom.imagePath}" alt="${mushroom.commonName}" class="card-image">` : ''}
     ${mushroom.alternateNames && mushroom.alternateNames.length ? `
       <div class="detail-section">
@@ -70,11 +82,6 @@ const MushroomUI = (() => {
         <h3>Identification Features</h3>
         <p>Spore Print: ${mushroom.identificationFeatures.sporePrint}</p>
         <p>Cap Texture: ${mushroom.identificationFeatures.capTexture}</p>
-      </div>` : ''}
-    ${mushroom.etsyLink ? `
-      <div class="detail-section">
-        <h3>Buy on Etsy</h3>
-        <p><a href="${mushroom.etsyLink}" target="_blank">${mushroom.etsyLink}</a></p>
       </div>` : ''}
   `;
 

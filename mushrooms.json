@@ -68,7 +68,10 @@
         "identificationFeatures": {
           "sporePrint": "Cinnamon-brown",
           "capTexture": "Slimy when fresh"
-        }
+        },
+        "price": "$25",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       
       {
@@ -139,7 +142,10 @@
         "identificationFeatures": {
           "sporePrint": "White",
           "capTexture": "Smooth with white fibrils"
-        }
+        },
+        "price": "$25",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       
       {
@@ -210,7 +216,10 @@
         "identificationFeatures": {
           "sporePrint": "Cinnamon-brown",
           "capTexture": "Slimy when fresh"
-        }
+        },
+        "price": "$22",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       
       {
@@ -275,7 +284,10 @@
         "identificationFeatures": {
           "sporePrint": "Cinnamon-brown",
           "capTexture": "Slimy when fresh"
-        }
+        },
+        "price": "$18",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       
       {
@@ -345,7 +357,10 @@
         "identificationFeatures": {
           "sporePrint": "Cinnamon-brown",
           "capTexture": "Slimy when fresh"
-        }
+        },
+        "price": "$25",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       
       {
@@ -400,7 +415,10 @@
         "identificationFeatures": {
           "sporePrint": "Cinnamon-brown",
           "capTexture": "Slimy when fresh"
-        }
+        },
+        "price": "$17",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       
       {
@@ -465,7 +483,10 @@
         "identificationFeatures": {
           "sporePrint": "White",
           "capTexture": "Gelatinous when fresh"
-        }
+        },
+        "price": "$25",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "bearshead",
@@ -540,7 +561,10 @@
         "identificationFeatures": {
           "sporePrint": "Creamy white",
           "capTexture": "Firm and slightly chewy with a bristly surface"
-        }
+        },
+        "price": "$28",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "king-trumpet",
@@ -615,7 +639,10 @@
         "identificationFeatures": {
           "sporePrint": "White to cream",
           "capTexture": "Firm, meaty texture with a smooth, shiny surface when mature"
-        }
+        },
+        "price": "$25",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "pink-oyster",
@@ -690,7 +717,10 @@
         "identificationFeatures": {
           "sporePrint": "White to creamy",
           "capTexture": "Velvety and fibrous with a vibrant pink color"
-        }
+        },
+        "price": "$22",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "coral-tooth",
@@ -765,7 +795,10 @@
         "identificationFeatures": {
           "sporePrint": "White to creamy",
           "capTexture": "Firm with a branching, coral-like structure"
-        }
+        },
+        "price": "$22",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "goldenoyster",
@@ -840,7 +873,10 @@
         "identificationFeatures": {
           "sporePrint": "Creamy white",
           "capTexture": "Delicate and slightly velvety with a thin cap"
-        }
+        },
+        "price": "$17",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "princesspearl",
@@ -915,7 +951,10 @@
         "identificationFeatures": {
           "sporePrint": "Light gray",
           "capTexture": "Soft and delicate with a slight pearly sheen"
-        }
+        },
+        "price": "$19",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "whiteelmoyster",
@@ -990,7 +1029,10 @@
         "identificationFeatures": {
           "sporePrint": "Creamy white",
           "capTexture": "Smooth with a slight velvety surface"
-        }
+        },
+        "price": "$15",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       },
       {
         "id": "enoki",
@@ -1062,10 +1104,10 @@
           ]
         },
         "cultivationTips": "Enoki mushrooms thrive in cool, humid conditions and are typically grown in controlled environments using sterilized sawdust or wood-based substrates. Consistent temperature control and limited light exposure during cultivation help produce their characteristic long, slender stems and tiny caps.",
-        "identificationFeatures": {
-          "sporePrint": "Pale white to cream",
-          "capTexture": "Smooth and delicate"
-        }
+        "price": "$20",
+        "stockSchedule": "For bulk orders, inquire at farmhousemushroom@gmail.com. 50 lbs approximately $500 (40-60 days delivery). Mass scheduling available upon request.",
+        "stockStatus": "Coming Soon"
       }
     ]
   }
+}
