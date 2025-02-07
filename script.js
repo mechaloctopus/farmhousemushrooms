@@ -95,13 +95,19 @@ const MushroomUI = (() => {
   }
 
   function showPanel(mushroom) {
+    DOM.panel.scrollTo(0, 0);
     DOM.content.innerHTML = panelTemplate(mushroom);
     DOM.panel.classList.add('active');
+    document.getElementById('panelOverlay').style.display = 'block';
   }
 
   function closePanel() {
     DOM.panel.classList.remove('active');
+    document.getElementById('panelOverlay').style.display = 'none';
   }
+
+  // Add click-outside handler
+  document.getElementById('panelOverlay').addEventListener('click', closePanel);
 
   // Public methods
   return {
