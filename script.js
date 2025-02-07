@@ -109,17 +109,18 @@ const MushroomUI = (() => {
       try {
         const response = await fetch('mushrooms.json');
         const data = await response.json();
-        
-        DOM.grid.innerHTML = data.mushrooms.map(mushroom => {
-          const card = cardTemplate(mushroom);
-          return card.replace('<div class="card">', 
-            `<div class="card" data-mushroom="${encodeURIComponent(JSON.stringify(mushroom))}">`);
-        }).join('');
-        
+
+        // Check if the JSON structure is valid
+        if (!data.mushrooms) {
+          throw new Error("Invalid JSON structure: missing 'mushrooms' key");
+        }
+
+        DOM.grid.innerHTML = data.mushrooms.map(mushroom => cardTemplate(mushroom)).join('');
+
         DOM.grid.addEventListener('click', handleCardClick);
         document.querySelector('.close-btn').addEventListener('click', closePanel);
-
       } catch (error) {
+        console.error('Error loading mushrooms.json:', error);
         DOM.grid.innerHTML = `<div class="error">Failed to load mushroom data</div>`;
       }
     }
