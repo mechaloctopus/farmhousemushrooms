@@ -14,9 +14,12 @@ const MushroomUI = (() => {
         <h2>${mushroom.commonName}</h2>
         <p class="scientific-name">${mushroom.scientificName}</p>
         <div class="card-info">
-          <div class="price-bubble">${mushroom.price}</div>
-          <a href="${mushroom.etsyLink}" target="_blank" class="genetics-btn">Our Genetics</a>
-          <button class="stock-btn" title="${mushroom.stockSchedule}">Stock: ${mushroom.stockStatus}</button>
+          <div class="price-bubble">$${mushroom.price}/lb</div>
+          <a href="${mushroom.etsyLink}" target="_blank" class="genetics-btn">Genetics</a>
+          <button class="stock-btn tooltip">
+            Stock
+            <span class="tooltiptext">${mushroom.stockStatus}</span>
+          </button>
         </div>
       </div>
     </div>
@@ -26,9 +29,12 @@ const MushroomUI = (() => {
     <h2>${mushroom.commonName}</h2>
     <p class="scientific-name">${mushroom.scientificName}</p>
     <div class="panel-info">
-      <div class="price-bubble">${mushroom.price}</div>
-      <a href="${mushroom.etsyLink}" target="_blank" class="genetics-btn">Our Genetics</a>
-      <button class="stock-btn" title="${mushroom.stockSchedule}">Stock: ${mushroom.stockStatus}</button>
+      <div class="price-bubble">$${mushroom.price}/lb</div>
+      <a href="${mushroom.etsyLink}" target="_blank" class="genetics-btn">Genetics</a>
+      <button class="stock-btn tooltip">
+        Stock
+        <span class="tooltiptext">${mushroom.stockStatus}</span>
+      </button>
     </div>
     ${mushroom.imagePath ? `<img src="${mushroom.imagePath}" alt="${mushroom.commonName}" class="card-image">` : ''}
     ${mushroom.alternateNames && mushroom.alternateNames.length ? `
@@ -129,11 +135,9 @@ const MushroomUI = (() => {
         console.error('Error loading mushrooms.json:', error);
         DOM.grid.innerHTML = `<div class="error">Failed to load mushroom data</div>`;
       }
-    }
+    },
+    closePanel
   };
 })();
 
-document.addEventListener('DOMContentLoaded', MushroomUI.init);
-
-// Expose closePanel to global scope so inline onclick works
-window.closePanel = MushroomUI.closePanel; 
+document.addEventListener('DOMContentLoaded', MushroomUI.init); 
