@@ -93,13 +93,18 @@
         .close-btn {
             position: fixed;
             top: 1.5rem;
-            right: 1.5rem;
+            right: -100%;
             cursor: pointer;
             background: transparent;
             border: none;
             color: var(--text-primary);
             font-size: 1.5rem;
             z-index: 1001;
+            transition: var(--transition);
+        }
+
+        .content-panel.active .close-btn {
+            right: 1.5rem;
         }
 
         .panel-content {
