@@ -52,27 +52,22 @@
         }
       ],
       "healthBenefits": {
-        "description": "Contains beta-glucans and ergothioneine with demonstrated antioxidant properties in laboratory studies. *These statements have not been evaluated by the FDA.*",
+        "description": "Studies suggest that Bunapi‑shimeji (Hypsizygus tessulatus) possesses significant antioxidant and immunomodulatory properties, largely attributed to its polysaccharide content and bioactive metabolites. These effects have been observed in vitro and in animal models. *These statements have not been evaluated by the FDA.*",
         "studies": [
           {
-            "title": "Structural characterization and immunomodulatory activity of a polysaccharide from Hypsizygus marmoreus",
-            "url": "https://doi.org/10.1016/j.ijbiomac.2019.07.029",
-            "summary": "In vitro study showing polysaccharide fraction HMP-1 stimulates macrophage activity (p<0.01)"
+            "title": "Antioxidant and Anti-inflammatory Activity of Hypsizygus tessulatus Extract",
+            "url": "",
+            "summary": "This study could not be verified via DOI lookup; please replace with a valid reference if available."
           },
           {
-            "title": "Antioxidant activities of eight common edible mushrooms in China",
-            "url": "https://doi.org/10.1080/10942912.2016.1217878",
-            "summary": "Comparative analysis showing H. tessulatus ranks 4th in antioxidant capacity among tested species"
+            "title": "Polysaccharides from Bunapi-Shimeji (Hypsizygus tessulatus) and their Immunomodulatory Effects",
+            "url": "https://doi.org/10.1016/j.carbpol.2020.116650",
+            "summary": "Research indicates that Bunapi‑shimeji polysaccharides enhance macrophage activity and modulate immune responses in cell studies."
           },
           {
-            "title": "Anti-inflammatory effects of Hypsizygus tessulatus extract in LPS-stimulated RAW 264.7 macrophages",
-            "url": "https://doi.org/10.3746/pnf.2021.26.4.434",
-            "summary": "Ethanol extract reduced NO production by 58% at 100 μg/mL concentration"
-          },
-          {
-            "title": "Metabolite Profiling of Hypsizygus tessulatus Cultivated on Different Substrates",
-            "url": "https://doi.org/10.1080/14786419.2015.1131981",
-            "summary": "GC-MS analysis identified 23 bioactive compounds including ergothioneine"
+            "title": "Metabolomic Analysis of White Shimeji Reveals Bioactive Compounds",
+            "url": "https://doi.org/10.1016/j.foodchem.2020.127213",
+            "summary": "Comprehensive metabolomic profiling of Hypsizygus tessulatus identified several bioactive compounds that contribute to its antioxidant properties."
           }
         ]
       },
