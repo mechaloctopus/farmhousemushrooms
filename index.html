@@ -148,18 +148,18 @@
         /* New styles for price bubble and buttons */
         .price-bubble {
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 0;
+            right: 0;
             background-color: #FFEB3B;
             color: #000;
             font-weight: bold;
-            padding: 8px;
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 8px 12px;
+            border-radius: 4px;
+            width: auto;
+            height: auto;
+            clip-path: none;
+            font-size: 0.9rem;
+            transform: translate(10%, 10%);
         }
         .card {
             position: relative;
@@ -189,6 +189,8 @@
         .panel-info .price-bubble {
             position: static;
             margin-left: auto;
+            transform: none;
+            font-size: 1.1rem;
         }
 
         .panel-overlay {
@@ -203,6 +205,34 @@
         }
         .content-panel.active + .panel-overlay {
             display: block;
+        }
+
+        /* Add tooltip styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--primary);
+            color: var(--text-primary);
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
 </head>
