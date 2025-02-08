@@ -62,7 +62,7 @@
     },
     {
       "id": "bearshead",
-      "commonName": "Bear's Head Mushroom",
+      "commonName": "Bear's Head",
       "scientificName": "Hericium americanum",
       "imagePath": "images/bearshead.jpg",
       "etsyLink": "https://www.etsy.com/listings/bearshead",
@@ -200,7 +200,7 @@
     },
     {
       "id": "chestnut",
-      "commonName": "Chestnut Mushroom",
+      "commonName": "Chestnut",
       "scientificName": "Pholiota adiposa",
       "imagePath": "images/chestnut.jpg",
       "etsyLink": "https://www.etsy.com/listings/chestnutmushroom",
@@ -269,7 +269,7 @@
     },
     {
       "id": "coral-tooth",
-      "commonName": "Coral Tooth Mushroom",
+      "commonName": "Coral Tooth",
       "scientificName": "Hericium coralloides",
       "imagePath": "images/coraltooth.jpg",
       "etsyLink": "https://www.etsy.com/listings/coraltooth",
@@ -350,7 +350,7 @@
     },
     {
       "id": "enoki",
-      "commonName": "Enoki Mushroom",
+      "commonName": "Enoki",
       "scientificName": "Flammulina velutipes",
       "imagePath": "images/enoki.jpg",
       "etsyLink": "https://www.etsy.com/listings/enoki",
@@ -427,7 +427,7 @@
     },
     {
       "id": "goldenoyster",
-      "commonName": "Golden Oyster Mushroom",
+      "commonName": "Golden Oyster",
       "scientificName": "Pleurotus citrinopileatus",
       "imagePath": "images/goldenoyster.jpg",
       "etsyLink": "https://www.etsy.com/listings/goldenoyster",
@@ -508,7 +508,7 @@
     },
     {
       "id": "king-trumpet",
-      "commonName": "King Trumpet Mushroom",
+      "commonName": "Trumpet Royale",
       "scientificName": "Pleurotus eryngii",
       "imagePath": "images/kingtrumpet.jpg",
       "etsyLink": "https://www.etsy.com/listings/king-trumpet",
@@ -740,7 +740,7 @@
     },
     {
       "id": "pink-oyster",
-      "commonName": "Pink Oyster Mushroom",
+      "commonName": "Pink Oyster",
       "scientificName": "Pleurotus djamor",
       "imagePath": "images/pinkoyster.jpg",
       "etsyLink": "https://www.etsy.com/listings/pink-oyster",
@@ -890,7 +890,7 @@
     },
     {
       "id": "princesspearl",
-      "commonName": "Princess Pearl Mushroom",
+      "commonName": "Princess Pearl",
       "scientificName": "Auricularia princessa",
       "imagePath": "images/princesspearl.jpg",
       "etsyLink": "https://www.etsy.com/listings/princesspearl",
