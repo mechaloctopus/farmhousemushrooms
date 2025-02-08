@@ -1,0 +1,44 @@
+1
+For [MushroomX] in mushrooms.json:
+1. Verify scientific name through:
+   - Index Fungorum (http://www.indexfungorum.org)
+   - Mycobank (https://www.mycobank.org)
+   - USDA Fungus-Host Distributions
+2. Confirm alternate names using:
+   - CABI Bioscience databases
+   - Regional foraging guides (minimum 3 sources)
+   - Japanese/Chinese/Korean common names via J-STAGE/CNKI
+3. Flag any names containing contradictory terms ("oyster" in non-Pleurotus species)
+4. Cross-reference cultivation guides from:
+   - North American Mycological Association
+   - Asia-Pacific Mycological Association
+5. Validate against common commercial misnomers list
+
+2
+For the "MushroomX" folkloreHistory section:
+1. Verify historical claims against anthropological databases (JSTOR, Ethnobiology journals)
+2. Confirm traditional medicinal uses with TCM/Kampo/Amazonian ethnobotanical sources
+3. Replace any anecdotal claims with properly cited cultural references
+4. Ensure sources include:
+   - Academic publications (DOI links preferred)
+   - Museum collection records
+   - UNESCO intangible cultural heritage references
+5. Add 1 Japanese and 1 Chinese historical reference if applicable
+
+3
+For the "MushroomX" healthBenefits section:
+1. Verify each study exists via PubMed/Google Scholar DOI lookup
+2. Confirm study conclusions actually support the described benefit
+3. Replace non-working links with DOI/PMID references
+4. Remove any claims without peer-reviewed support
+5. Add 1 recent study (last 5 years) from reputable journal
+6. Ensure summary excerpts match study abstracts exactly
+
+4
+For the "MushroomX" recipes array:
+1. Test all recipe URLs for 200 status
+2. Confirm descriptions match linked content exactly
+3. Replace placeholder/example.com links with actual recipe sites
+4. Ensure at least 1 recipe references a MICHELIN-starred restaurant's use
+5. Add preparation note about optimal cooking method (per CIA Professional Chef text)
+6. Verify nutritional pairing validity (Flavor Bible compatibility)
